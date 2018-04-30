@@ -1,0 +1,24 @@
+PODS:
+  - HexColors (6.0.0)
+  - ScalingCarousel (2.2)
+  - SwiftyBeaver (1.5.2)
+
+DEPENDENCIES:
+  - HexColors
+  - ScalingCarousel
+  - SwiftyBeaver
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - HexColors
+    - ScalingCarousel
+    - SwiftyBeaver
+
+SPEC CHECKSUMS:
+  HexColors: f8c66339541a74bb08905bfe7cd4f8cc85e9e173
+  ScalingCarousel: 346af59372a3823a1a38d5bc02ac4fd16afa4fd7
+  SwiftyBeaver: 85daaaa2b3ae6e31b7b55c99430e8b91dac088af
+
+PODFILE CHECKSUM: 37b182b603b6fabf6fd98344e03cb7c5328b71f6
+
+COCOAPODS: 1.5.0

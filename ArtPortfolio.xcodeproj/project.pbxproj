@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B20D118205353C90042960F /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B20D117205353C90042960F /* Artist.swift */; };
+		1B65F1E12006FFBD00F63446 /* PortfolioEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B65F1E02006FFBD00F63446 /* PortfolioEntry.swift */; };
+		1B65F1E32007013200F63446 /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B65F1E22007013200F63446 /* CarouselCollectionViewCell.swift */; };
+		1BD9C75D2004182900022C8B /* SAKDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9C75B2004182900022C8B /* SAKDefaults.swift */; };
+		1BD9C75E2004182900022C8B /* SAKLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9C75C2004182900022C8B /* SAKLogging.swift */; };
+		1BD9C7602004183200022C8B /* UIColor+SAK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9C75F2004183200022C8B /* UIColor+SAK.swift */; };
+		1BD9C76720041B8D00022C8B /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9C76620041B8C00022C8B /* DataController.swift */; };
 		1BF4B17B200303AF00376A8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4B17A200303AF00376A8D /* AppDelegate.swift */; };
-		1BF4B17D200303AF00376A8D /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4B17C200303AF00376A8D /* MasterViewController.swift */; };
-		1BF4B17F200303AF00376A8D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4B17E200303AF00376A8D /* DetailViewController.swift */; };
+		1BF4B17F200303AF00376A8D /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4B17E200303AF00376A8D /* CarouselViewController.swift */; };
 		1BF4B182200303AF00376A8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4B180200303AF00376A8D /* Main.storyboard */; };
 		1BF4B184200303AF00376A8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4B183200303AF00376A8D /* Assets.xcassets */; };
 		1BF4B187200303AF00376A8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4B185200303AF00376A8D /* LaunchScreen.storyboard */; };
 		1BF4B192200303AF00376A8D /* ArtPortfolioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4B191200303AF00376A8D /* ArtPortfolioTests.swift */; };
+		1BF4B1A02003148000376A8D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4B19F2003148000376A8D /* Podfile */; };
+		509DE1D217B14B6CBFA3C861 /* Pods_ArtPortfolio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F112DF565C626360A700D48 /* Pods_ArtPortfolio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,10 +35,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B20D117205353C90042960F /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		1B65F1E02006FFBD00F63446 /* PortfolioEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioEntry.swift; sourceTree = "<group>"; };
+		1B65F1E22007013200F63446 /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
+		1BD9C75B2004182900022C8B /* SAKDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAKDefaults.swift; sourceTree = "<group>"; };
+		1BD9C75C2004182900022C8B /* SAKLogging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAKLogging.swift; sourceTree = "<group>"; };
+		1BD9C75F2004183200022C8B /* UIColor+SAK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SAK.swift"; sourceTree = "<group>"; };
+		1BD9C76620041B8C00022C8B /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		1BF4B177200303AF00376A8D /* ArtPortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtPortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BF4B17A200303AF00376A8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1BF4B17C200303AF00376A8D /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		1BF4B17E200303AF00376A8D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		1BF4B17E200303AF00376A8D /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
 		1BF4B181200303AF00376A8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1BF4B183200303AF00376A8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BF4B186200303AF00376A8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +52,10 @@
 		1BF4B18D200303AF00376A8D /* ArtPortfolioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtPortfolioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BF4B191200303AF00376A8D /* ArtPortfolioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtPortfolioTests.swift; sourceTree = "<group>"; };
 		1BF4B193200303AF00376A8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BF4B19F2003148000376A8D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		2D705EC27CADBB806343D74C /* Pods-ArtPortfolio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtPortfolio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArtPortfolio/Pods-ArtPortfolio.debug.xcconfig"; sourceTree = "<group>"; };
+		4EBCB77AE3AD5CB564F3854A /* Pods-ArtPortfolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtPortfolio.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArtPortfolio/Pods-ArtPortfolio.release.xcconfig"; sourceTree = "<group>"; };
+		5F112DF565C626360A700D48 /* Pods_ArtPortfolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtPortfolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				509DE1D217B14B6CBFA3C861 /* Pods_ArtPortfolio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +77,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BD9C75A2004173400022C8B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1B65F1E02006FFBD00F63446 /* PortfolioEntry.swift */,
+				1B20D117205353C90042960F /* Artist.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1BD9C76520041B3300022C8B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1BD9C76620041B8C00022C8B /* DataController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		1BF4B16E200303AF00376A8D = {
 			isa = PBXGroup;
 			children = (
 				1BF4B179200303AF00376A8D /* ArtPortfolio */,
 				1BF4B190200303AF00376A8D /* ArtPortfolioTests */,
 				1BF4B178200303AF00376A8D /* Products */,
+				AC8564F3A81CAB2302D335B1 /* Pods */,
+				3740934E278C003C35DBF32E /* Frameworks */,
+				1BF4B19F2003148000376A8D /* Podfile */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,12 +118,12 @@
 		1BF4B179200303AF00376A8D /* ArtPortfolio */ = {
 			isa = PBXGroup;
 			children = (
-				1BF4B17A200303AF00376A8D /* AppDelegate.swift */,
-				1BF4B17C200303AF00376A8D /* MasterViewController.swift */,
-				1BF4B17E200303AF00376A8D /* DetailViewController.swift */,
-				1BF4B180200303AF00376A8D /* Main.storyboard */,
-				1BF4B183200303AF00376A8D /* Assets.xcassets */,
-				1BF4B185200303AF00376A8D /* LaunchScreen.storyboard */,
+				1BF4B1AB2003E12A00376A8D /* Application */,
+				1BD9C76520041B3300022C8B /* Controllers */,
+				1BD9C75A2004173400022C8B /* Model */,
+				1BF4B19C2003041C00376A8D /* Resources */,
+				1BF4B19D2003046000376A8D /* ViewControllers */,
+				1BF4B19E2003048300376A8D /* Utility */,
 				1BF4B188200303AF00376A8D /* Info.plist */,
 			);
 			path = ArtPortfolio;
@@ -99,6 +138,76 @@
 			path = ArtPortfolioTests;
 			sourceTree = "<group>";
 		};
+		1BF4B19C2003041C00376A8D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1BF4B183200303AF00376A8D /* Assets.xcassets */,
+				1BF4B185200303AF00376A8D /* LaunchScreen.storyboard */,
+				1BF4B180200303AF00376A8D /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1BF4B19D2003046000376A8D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1BF4B17E200303AF00376A8D /* CarouselViewController.swift */,
+				1B65F1E22007013200F63446 /* CarouselCollectionViewCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1BF4B19E2003048300376A8D /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				1BF4B1AC2003E18200376A8D /* Classes */,
+				1BF4B1AD2003E18900376A8D /* Extensions */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		1BF4B1AB2003E12A00376A8D /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				1BF4B17A200303AF00376A8D /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		1BF4B1AC2003E18200376A8D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1BD9C75B2004182900022C8B /* SAKDefaults.swift */,
+				1BD9C75C2004182900022C8B /* SAKLogging.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		1BF4B1AD2003E18900376A8D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1BD9C75F2004183200022C8B /* UIColor+SAK.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3740934E278C003C35DBF32E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F112DF565C626360A700D48 /* Pods_ArtPortfolio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC8564F3A81CAB2302D335B1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D705EC27CADBB806343D74C /* Pods-ArtPortfolio.debug.xcconfig */,
+				4EBCB77AE3AD5CB564F3854A /* Pods-ArtPortfolio.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +215,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BF4B196200303B000376A8D /* Build configuration list for PBXNativeTarget "ArtPortfolio" */;
 			buildPhases = (
+				32DC29F54762B2692B4B96B2 /* [CP] Check Pods Manifest.lock */,
 				1BF4B173200303AF00376A8D /* Sources */,
 				1BF4B174200303AF00376A8D /* Frameworks */,
 				1BF4B175200303AF00376A8D /* Resources */,
+				F7BE0163AE1D448C8323532D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -144,12 +255,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = SKern;
 				TargetAttributes = {
 					1BF4B176200303AF00376A8D = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					1BF4B18C200303AF00376A8D = {
 						CreatedOnToolsVersion = 9.2;
@@ -184,6 +295,7 @@
 			files = (
 				1BF4B187200303AF00376A8D /* LaunchScreen.storyboard in Resources */,
 				1BF4B184200303AF00376A8D /* Assets.xcassets in Resources */,
+				1BF4B1A02003148000376A8D /* Podfile in Resources */,
 				1BF4B182200303AF00376A8D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,14 +309,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		32DC29F54762B2692B4B96B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ArtPortfolio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7BE0163AE1D448C8323532D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ArtPortfolio/Pods-ArtPortfolio-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/HexColors/HexColors.framework",
+				"${BUILT_PRODUCTS_DIR}/ScalingCarousel/ScalingCarousel.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HexColors.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScalingCarousel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArtPortfolio/Pods-ArtPortfolio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1BF4B173200303AF00376A8D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BF4B17F200303AF00376A8D /* DetailViewController.swift in Sources */,
-				1BF4B17D200303AF00376A8D /* MasterViewController.swift in Sources */,
+				1B65F1E12006FFBD00F63446 /* PortfolioEntry.swift in Sources */,
+				1BD9C7602004183200022C8B /* UIColor+SAK.swift in Sources */,
+				1BD9C75E2004182900022C8B /* SAKLogging.swift in Sources */,
+				1BF4B17F200303AF00376A8D /* CarouselViewController.swift in Sources */,
+				1B65F1E32007013200F63446 /* CarouselCollectionViewCell.swift in Sources */,
+				1BD9C76720041B8D00022C8B /* DataController.swift in Sources */,
 				1BF4B17B200303AF00376A8D /* AppDelegate.swift in Sources */,
+				1B20D118205353C90042960F /* Artist.swift in Sources */,
+				1BD9C75D2004182900022C8B /* SAKDefaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +421,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -267,6 +429,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -317,6 +480,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -324,6 +488,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -355,14 +520,17 @@
 		};
 		1BF4B197200303B000376A8D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D705EC27CADBB806343D74C /* Pods-ArtPortfolio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3HDZQ5XYMF;
 				INFOPLIST_FILE = ArtPortfolio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = skern.ArtPortfolio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -370,14 +538,16 @@
 		};
 		1BF4B198200303B000376A8D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EBCB77AE3AD5CB564F3854A /* Pods-ArtPortfolio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3HDZQ5XYMF;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ArtPortfolio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = skern.ArtPortfolio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
