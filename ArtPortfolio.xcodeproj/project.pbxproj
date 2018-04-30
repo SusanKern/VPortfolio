@@ -21,6 +21,7 @@
 		1BF4B187200303AF00376A8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4B185200303AF00376A8D /* LaunchScreen.storyboard */; };
 		1BF4B192200303AF00376A8D /* ArtPortfolioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4B191200303AF00376A8D /* ArtPortfolioTests.swift */; };
 		1BF4B1A02003148000376A8D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4B19F2003148000376A8D /* Podfile */; };
+		1BF8EC392097B96300856028 /* ArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF8EC382097B96300856028 /* ArtistViewController.swift */; };
 		509DE1D217B14B6CBFA3C861 /* Pods_ArtPortfolio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F112DF565C626360A700D48 /* Pods_ArtPortfolio.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		1BF4B191200303AF00376A8D /* ArtPortfolioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtPortfolioTests.swift; sourceTree = "<group>"; };
 		1BF4B193200303AF00376A8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BF4B19F2003148000376A8D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1BF8EC382097B96300856028 /* ArtistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewController.swift; sourceTree = "<group>"; };
 		2D705EC27CADBB806343D74C /* Pods-ArtPortfolio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtPortfolio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArtPortfolio/Pods-ArtPortfolio.debug.xcconfig"; sourceTree = "<group>"; };
 		4EBCB77AE3AD5CB564F3854A /* Pods-ArtPortfolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtPortfolio.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArtPortfolio/Pods-ArtPortfolio.release.xcconfig"; sourceTree = "<group>"; };
 		5F112DF565C626360A700D48 /* Pods_ArtPortfolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtPortfolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +155,7 @@
 			children = (
 				1BF4B17E200303AF00376A8D /* CarouselViewController.swift */,
 				1B65F1E22007013200F63446 /* CarouselCollectionViewCell.swift */,
+				1BF8EC382097B96300856028 /* ArtistViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				1BF4B17B200303AF00376A8D /* AppDelegate.swift in Sources */,
 				1B20D118205353C90042960F /* Artist.swift in Sources */,
 				1BD9C75D2004182900022C8B /* SAKDefaults.swift in Sources */,
+				1BF8EC392097B96300856028 /* ArtistViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

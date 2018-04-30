@@ -45,6 +45,10 @@ class CarouselViewController: UIViewController, UICollectionViewDelegate, UIColl
         let midIndexPath = IndexPath(row: superSizeForRolloverScrolling / 2, section: 0)
         collectionView.scrollToItem(at: midIndexPath, at: .left, animated: false)
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     
     // MARK: Card Collection DataSource
