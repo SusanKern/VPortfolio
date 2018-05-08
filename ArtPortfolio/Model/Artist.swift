@@ -11,4 +11,5 @@ struct Artist {
     let lastName: String!
     let email: String?
     let imageName: String?
+    let bio: String?
 }

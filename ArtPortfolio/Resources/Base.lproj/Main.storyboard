@@ -106,7 +106,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Victoria's Portfolio" id="e6h-ek-Ani">
-                        <barButtonItem key="rightBarButtonItem" title="I" id="4Zv-hb-uW3">
+                        <barButtonItem key="rightBarButtonItem" image="info" id="4Zv-hb-uW3">
                             <connections>
                                 <segue destination="A8k-zO-Mc7" kind="presentation" id="nd1-td-bBu"/>
                             </connections>
@@ -136,8 +136,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wX9-gg-YZG">
-                                <rect key="frame" x="16" y="413" width="343" height="39"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="24"/>
+                                <rect key="frame" x="16" y="413" width="343" height="42"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -154,14 +154,8 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TC4-43-nnM">
-                                <rect key="frame" x="16" y="460" width="343" height="39"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="24"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7C-mL-WTA">
-                                <rect key="frame" x="16" y="507" width="343" height="30.5"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="19"/>
+                                <rect key="frame" x="16" y="461" width="343" height="34"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="21"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -170,6 +164,7 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oof-cY-U7U">
                                         <rect key="frame" x="2" y="2" width="371" height="329.5"/>
+                                        <gestureRecognizers/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -180,23 +175,32 @@
                                     <constraint firstAttribute="bottom" secondItem="oof-cY-U7U" secondAttribute="bottom" constant="2" id="ryP-oV-XOa"/>
                                 </constraints>
                             </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" indicatorStyle="white" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogh-1q-NN4">
+                                <rect key="frame" x="0.0" y="509" width="375" height="158"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="QzZ-fy-tGq" firstAttribute="trailing" secondItem="TC4-43-nnM" secondAttribute="trailing" constant="16" id="05G-yH-X1S"/>
                             <constraint firstItem="GyE-kV-kcx" firstAttribute="leading" secondItem="QzZ-fy-tGq" secondAttribute="leading" id="1Tc-RI-yzz"/>
-                            <constraint firstItem="u7C-mL-WTA" firstAttribute="leading" secondItem="QzZ-fy-tGq" secondAttribute="leading" constant="16" id="7V0-DA-cgt"/>
-                            <constraint firstItem="TC4-43-nnM" firstAttribute="top" secondItem="wX9-gg-YZG" secondAttribute="bottom" constant="8" id="DPU-0l-4q6"/>
-                            <constraint firstItem="QzZ-fy-tGq" firstAttribute="trailing" secondItem="u7C-mL-WTA" secondAttribute="trailing" constant="16" id="DzO-0J-iZr"/>
+                            <constraint firstItem="QzZ-fy-tGq" firstAttribute="bottom" secondItem="Ogh-1q-NN4" secondAttribute="bottom" id="84r-Cs-K6N"/>
+                            <constraint firstItem="Ogh-1q-NN4" firstAttribute="leading" secondItem="QzZ-fy-tGq" secondAttribute="leading" id="CoP-8D-wtm"/>
+                            <constraint firstItem="TC4-43-nnM" firstAttribute="top" secondItem="wX9-gg-YZG" secondAttribute="bottom" constant="6" id="DPU-0l-4q6"/>
                             <constraint firstItem="wX9-gg-YZG" firstAttribute="top" secondItem="GyE-kV-kcx" secondAttribute="bottom" constant="15.5" id="Isa-sx-Ftj"/>
                             <constraint firstItem="5bq-8l-4Wz" firstAttribute="leading" secondItem="QzZ-fy-tGq" secondAttribute="leading" id="MvZ-m7-h0c"/>
+                            <constraint firstItem="Ogh-1q-NN4" firstAttribute="top" secondItem="TC4-43-nnM" secondAttribute="bottom" constant="14" id="Nj0-Gs-Svs"/>
                             <constraint firstItem="TC4-43-nnM" firstAttribute="leading" secondItem="QzZ-fy-tGq" secondAttribute="leading" constant="16" id="Oii-gC-1wb"/>
+                            <constraint firstItem="QzZ-fy-tGq" firstAttribute="trailing" secondItem="Ogh-1q-NN4" secondAttribute="trailing" id="UzR-ox-l1N"/>
                             <constraint firstItem="GyE-kV-kcx" firstAttribute="top" secondItem="5bq-8l-4Wz" secondAttribute="bottom" id="WSa-XU-6B0"/>
                             <constraint firstItem="GyE-kV-kcx" firstAttribute="trailing" secondItem="QzZ-fy-tGq" secondAttribute="trailing" id="ZeC-CW-nQd"/>
                             <constraint firstItem="5bq-8l-4Wz" firstAttribute="top" secondItem="QzZ-fy-tGq" secondAttribute="top" id="dYE-pP-7Bl"/>
                             <constraint firstItem="QzZ-fy-tGq" firstAttribute="trailing" secondItem="wX9-gg-YZG" secondAttribute="trailing" constant="16" id="flk-6l-5KM"/>
                             <constraint firstItem="5bq-8l-4Wz" firstAttribute="trailing" secondItem="QzZ-fy-tGq" secondAttribute="trailing" id="jWJ-PK-aGa"/>
-                            <constraint firstItem="u7C-mL-WTA" firstAttribute="top" secondItem="TC4-43-nnM" secondAttribute="bottom" constant="8" id="mAs-Cb-TiJ"/>
                             <constraint firstItem="wX9-gg-YZG" firstAttribute="leading" secondItem="QzZ-fy-tGq" secondAttribute="leading" constant="16" id="qYO-ky-tNc"/>
                             <constraint firstAttribute="height" secondItem="GyE-kV-kcx" secondAttribute="height" multiplier="2" id="t0y-w6-LQ5"/>
                         </constraints>
@@ -204,7 +208,7 @@
                     </view>
                     <connections>
                         <outlet property="artistImageView" destination="oof-cY-U7U" id="SJb-9X-RiU"/>
-                        <outlet property="bioLabel" destination="u7C-mL-WTA" id="12S-gE-dQE"/>
+                        <outlet property="bioTextView" destination="Ogh-1q-NN4" id="qYl-ks-1mW"/>
                         <outlet property="emailLabel" destination="TC4-43-nnM" id="OXQ-ut-43u"/>
                         <outlet property="nameLabel" destination="wX9-gg-YZG" id="HLb-et-gjb"/>
                     </connections>
@@ -233,4 +237,7 @@
             <point key="canvasLocation" x="-348" y="384"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="info" width="22" height="22"/>
+    </resources>
 </document>
