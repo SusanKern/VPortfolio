@@ -30,19 +30,11 @@ class PortfolioViewController: UIViewController, UICollectionViewDelegate, UICol
         self.items = DataController.sharedInstance.portfolioContent
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        collectionView.isHidden = true
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        collectionView.isHidden = false
-
         // Start in the middle of the super-large list of images, so scrolling will be "infinite" in either direction
-        let midIndexPath = IndexPath(row: superSizeForRolloverScrolling / 2, section: 0)
+        let midIndexPath = IndexPath(row: items.count * 100, section: 0)
         collectionView.scrollToItem(at: midIndexPath, at: .left, animated: false)
     }
     
