@@ -1,5 +1,5 @@
 //
-//  CarouselViewController.swift
+//  PortfolioViewController.swift
 //  ArtPortfolio
 //
 //  Created by Susan Kern on 1/7/18.
@@ -9,7 +9,7 @@
 import UIKit
 import ScalingCarousel
 
-class CarouselViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class PortfolioViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     // MARK: IBOutlets
     
@@ -51,7 +51,7 @@ class CarouselViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
 
     
-    // MARK: Card Collection DataSource
+    // MARK: Collection DataSource
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -62,11 +62,8 @@ class CarouselViewController: UIViewController, UICollectionViewDelegate, UIColl
         return superSizeForRolloverScrolling
     }
     
-    
-    // MARK: - Card Collection DataSource
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CarouselCollectionViewCell.identifier, for: indexPath) as! CarouselCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PortfolioCollectionViewCell.identifier, for: indexPath) as! PortfolioCollectionViewCell
         let entry = items[((indexPath as NSIndexPath).row) % items.count]  // "% items.count" allows scrolling to roll over
         cell.image.image = UIImage(named: entry.imageName)
         cell.titleLabel.text = entry.title

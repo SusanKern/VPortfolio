@@ -14,8 +14,7 @@ class ArtistViewController: UIViewController {
     
     private var workaroundScrollBug = true
     private var imageIndex = 0
-    //private var artist: Artist?
-    let artist =  DataController.sharedInstance.artist
+    private let artist =  DataController.sharedInstance.artist
 
 
     // MARK: IBOutlets
@@ -30,6 +29,9 @@ class ArtistViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        artistImageView.layer.borderColor = UIColor.app_whiteColor().cgColor
+        artistImageView.layer.borderWidth = 2
 
         guard let firstName = artist.firstName,
             let lastName = artist.lastName else { return }
@@ -42,10 +44,7 @@ class ArtistViewController: UIViewController {
         } else {
             bioTextView.text = ""
         }
-        
-        artistImageView.layer.borderColor = UIColor.app_whiteColor().cgColor
-        artistImageView.layer.borderWidth = 1
-        
+
         // Capture when user taps anywhere on screen
         let tapRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(tappedView))
         self.view.addGestureRecognizer(tapRecognizer)
@@ -59,10 +58,9 @@ class ArtistViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        bioTextView.flashScrollIndicators()
-        
         log.info("Present Info screen")
+
+        bioTextView.flashScrollIndicators()
     }
     
     
@@ -93,7 +91,6 @@ class ArtistViewController: UIViewController {
                           options: .transitionFlipFromRight,
                           animations: { self.artistImageView.image = toImage },
                           completion: nil)
-        //artistImageView.image = UIImage(named: artist.imageName[imageIndex])
     }
 
     

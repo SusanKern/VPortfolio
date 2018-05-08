@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		1B20D118205353C90042960F /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B20D117205353C90042960F /* Artist.swift */; };
 		1B65F1E12006FFBD00F63446 /* PortfolioEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B65F1E02006FFBD00F63446 /* PortfolioEntry.swift */; };
-		1B65F1E32007013200F63446 /* CarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B65F1E22007013200F63446 /* CarouselCollectionViewCell.swift */; };
+		1B65F1E32007013200F63446 /* PortfolioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B65F1E22007013200F63446 /* PortfolioCollectionViewCell.swift */; };
 		1BD9C75D2004182900022C8B /* SAKDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9C75B2004182900022C8B /* SAKDefaults.swift */; };
 		1BD9C75E2004182900022C8B /* SAKLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9C75C2004182900022C8B /* SAKLogging.swift */; };
 		1BD9C7602004183200022C8B /* UIColor+SAK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9C75F2004183200022C8B /* UIColor+SAK.swift */; };
 		1BD9C76720041B8D00022C8B /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9C76620041B8C00022C8B /* DataController.swift */; };
 		1BF4B17B200303AF00376A8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4B17A200303AF00376A8D /* AppDelegate.swift */; };
-		1BF4B17F200303AF00376A8D /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4B17E200303AF00376A8D /* CarouselViewController.swift */; };
+		1BF4B17F200303AF00376A8D /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4B17E200303AF00376A8D /* PortfolioViewController.swift */; };
 		1BF4B182200303AF00376A8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4B180200303AF00376A8D /* Main.storyboard */; };
 		1BF4B184200303AF00376A8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4B183200303AF00376A8D /* Assets.xcassets */; };
 		1BF4B187200303AF00376A8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4B185200303AF00376A8D /* LaunchScreen.storyboard */; };
@@ -38,14 +38,14 @@
 /* Begin PBXFileReference section */
 		1B20D117205353C90042960F /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		1B65F1E02006FFBD00F63446 /* PortfolioEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioEntry.swift; sourceTree = "<group>"; };
-		1B65F1E22007013200F63446 /* CarouselCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCollectionViewCell.swift; sourceTree = "<group>"; };
+		1B65F1E22007013200F63446 /* PortfolioCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCollectionViewCell.swift; sourceTree = "<group>"; };
 		1BD9C75B2004182900022C8B /* SAKDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAKDefaults.swift; sourceTree = "<group>"; };
 		1BD9C75C2004182900022C8B /* SAKLogging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAKLogging.swift; sourceTree = "<group>"; };
 		1BD9C75F2004183200022C8B /* UIColor+SAK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SAK.swift"; sourceTree = "<group>"; };
 		1BD9C76620041B8C00022C8B /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		1BF4B177200303AF00376A8D /* ArtPortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtPortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BF4B17A200303AF00376A8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1BF4B17E200303AF00376A8D /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
+		1BF4B17E200303AF00376A8D /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
 		1BF4B181200303AF00376A8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1BF4B183200303AF00376A8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BF4B186200303AF00376A8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -153,8 +153,8 @@
 		1BF4B19D2003046000376A8D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				1BF4B17E200303AF00376A8D /* CarouselViewController.swift */,
-				1B65F1E22007013200F63446 /* CarouselCollectionViewCell.swift */,
+				1BF4B17E200303AF00376A8D /* PortfolioViewController.swift */,
+				1B65F1E22007013200F63446 /* PortfolioCollectionViewCell.swift */,
 				1BF8EC382097B96300856028 /* ArtistViewController.swift */,
 			);
 			path = ViewControllers;
@@ -363,8 +363,8 @@
 				1B65F1E12006FFBD00F63446 /* PortfolioEntry.swift in Sources */,
 				1BD9C7602004183200022C8B /* UIColor+SAK.swift in Sources */,
 				1BD9C75E2004182900022C8B /* SAKLogging.swift in Sources */,
-				1BF4B17F200303AF00376A8D /* CarouselViewController.swift in Sources */,
-				1B65F1E32007013200F63446 /* CarouselCollectionViewCell.swift in Sources */,
+				1BF4B17F200303AF00376A8D /* PortfolioViewController.swift in Sources */,
+				1B65F1E32007013200F63446 /* PortfolioCollectionViewCell.swift in Sources */,
 				1BD9C76720041B8D00022C8B /* DataController.swift in Sources */,
 				1BF4B17B200303AF00376A8D /* AppDelegate.swift in Sources */,
 				1B20D118205353C90042960F /* Artist.swift in Sources */,

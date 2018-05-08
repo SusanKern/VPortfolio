@@ -9,9 +9,9 @@
 import UIKit
 import ScalingCarousel
 
-class CarouselCollectionViewCell: ScalingCarouselCell {
+class PortfolioCollectionViewCell: ScalingCarouselCell {
     
-    static let identifier = "CarouselCollectionViewCell"
+    static let identifier = "PortfolioCollectionViewCell"
 
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
