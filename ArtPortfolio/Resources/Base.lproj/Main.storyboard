@@ -162,12 +162,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GyE-kV-kcx">
                                 <rect key="frame" x="0.0" y="64" width="375" height="333.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oof-cY-U7U">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oof-cY-U7U">
                                         <rect key="frame" x="2" y="2" width="371" height="329.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <gestureRecognizers/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="oof-cY-U7U" firstAttribute="leading" secondItem="GyE-kV-kcx" secondAttribute="leading" constant="2" id="LIw-ln-3qB"/>
                                     <constraint firstItem="oof-cY-U7U" firstAttribute="top" secondItem="GyE-kV-kcx" secondAttribute="top" constant="2" id="VUw-25-pYx"/>

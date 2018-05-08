@@ -13,7 +13,10 @@ class ArtistViewController: UIViewController {
     // MARK: Private variables
     
     private var workaroundScrollBug = true
-    
+    private var imageIndex = 0
+    //private var artist: Artist?
+    let artist =  DataController.sharedInstance.artist
+
 
     // MARK: IBOutlets
     
@@ -28,12 +31,9 @@ class ArtistViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let artist =  DataController.sharedInstance.artist
         guard let firstName = artist.firstName,
             let lastName = artist.lastName else { return }
-        if let imageName = artist.imageName {
-            artistImageView.image = UIImage(named: imageName)
-        }
+        artistImageView.image = UIImage(named: artist.imageName[0])
         nameLabel.text = "\(firstName) \(lastName)"
         emailLabel.text = artist.email
         
@@ -42,6 +42,9 @@ class ArtistViewController: UIViewController {
         } else {
             bioTextView.text = ""
         }
+        
+        artistImageView.layer.borderColor = UIColor.app_whiteColor().cgColor
+        artistImageView.layer.borderWidth = 1
         
         // Capture when user taps anywhere on screen
         let tapRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(tappedView))
@@ -81,7 +84,16 @@ class ArtistViewController: UIViewController {
     }
     
     @objc func tappedView() {
-        log.info("tapped image")
+        imageIndex = imageIndex + 1 
+        imageIndex = imageIndex == artist.imageName.count ? 0 : imageIndex
+        
+        let toImage = UIImage(named:artist.imageName[imageIndex])
+        UIView.transition(with: self.artistImageView,
+                          duration: 0.5,
+                          options: .transitionFlipFromRight,
+                          animations: { self.artistImageView.image = toImage },
+                          completion: nil)
+        //artistImageView.image = UIImage(named: artist.imageName[imageIndex])
     }
 
     

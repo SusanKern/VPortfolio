@@ -29,7 +29,7 @@ final class DataController {
     let artist = Artist(firstName: "Victoria", 
                         lastName: "Kern", 
                         email: "vkern@artist.com", 
-                        imageName: "VImage",
+                        imageName: ["VImage0", "VImage1", "VImage2"],
                         bio: "Victoria is an award-winning artist, poet and actress (shown here in the lead role in 'Hello Dolly').  She loves being creative, and doesn't really love math.\n\nHer favorite activity is to sit and draw. She also loves volleyball and soccer.\n\nVictoria attends North Carolina State, as part of the Design school.")
 }
      

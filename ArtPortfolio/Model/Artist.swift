@@ -10,6 +10,6 @@ struct Artist {
     let firstName: String!
     let lastName: String!
     let email: String?
-    let imageName: String?
+    let imageName: [String]
     let bio: String?
 }
