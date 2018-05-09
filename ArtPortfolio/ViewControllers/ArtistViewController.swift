@@ -77,10 +77,6 @@ class ArtistViewController: UIViewController {
         }
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     @objc func tappedView() {
         imageIndex = imageIndex + 1 
         imageIndex = imageIndex == artist.imageName.count ? 0 : imageIndex

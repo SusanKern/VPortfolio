@@ -20,6 +20,7 @@ class PortfolioViewController: UIViewController, UICollectionViewDelegate, UICol
     
     private var items = [PortfolioEntry]()
     private let superSizeForRolloverScrolling = 10000000
+    private var firstPass = true
 
     
     // MARK: ViewController life cycle
@@ -33,13 +34,12 @@ class PortfolioViewController: UIViewController, UICollectionViewDelegate, UICol
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        // Start in the middle of the super-large list of images, so scrolling will be "infinite" in either direction
-        let midIndexPath = IndexPath(row: items.count * 100, section: 0)
-        collectionView.scrollToItem(at: midIndexPath, at: .left, animated: false)
-    }
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+        if (firstPass) {
+            // Start in the middle of the super-large list of images, so scrolling will be "infinite" in either direction
+            let midIndexPath = IndexPath(row: items.count * 100, section: 0)
+            collectionView.scrollToItem(at: midIndexPath, at: .left, animated: false)
+            firstPass = false
+        }
     }
 
     

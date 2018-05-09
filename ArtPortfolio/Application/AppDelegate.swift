@@ -67,9 +67,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white,
                                                             NSAttributedStringKey.font : UIFont(name: "Noteworthy-Light", size: 20) ?? UIFont(name: "Helvetica-Neue", size: 20)!]
-        
-        // Status bar
-        UIApplication.shared.statusBarStyle = .lightContent
     }
 }
 
