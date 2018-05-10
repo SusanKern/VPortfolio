@@ -14,4 +14,6 @@ struct PortfolioEntry {
     let description: String?
     let dateCreated: Date?
     let materials: String?
+    let size: String?
+    let awards: String?
 }

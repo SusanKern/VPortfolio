@@ -64,13 +64,19 @@ class PortfolioViewController: UIViewController, UICollectionViewDelegate, UICol
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let entry = items[((indexPath as NSIndexPath).row) % items.count]
-        let alert = UIAlertController(title: entry.title, message: nil, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
+        
+        let viewController : ArtworkViewController = self.storyboard!.instantiateViewController(withIdentifier: "ArtworkViewController") as! ArtworkViewController
+        viewController.artwork = entry
+        //self.present(viewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(viewController, animated: true)
+        
+        //let alert = UIAlertController(title: entry.title, message: nil, preferredStyle: .alert)
+        //alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        //present(alert, animated: true, completion: nil)
     }
     
     
-    // MARK: - UIScrollViewDelegate
+    // MARK: UIScrollViewDelegate
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         collectionView.didScroll()

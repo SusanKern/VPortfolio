@@ -14,6 +14,8 @@
 		1BD9C75E2004182900022C8B /* SAKLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9C75C2004182900022C8B /* SAKLogging.swift */; };
 		1BD9C7602004183200022C8B /* UIColor+SAK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9C75F2004183200022C8B /* UIColor+SAK.swift */; };
 		1BD9C76720041B8D00022C8B /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9C76620041B8C00022C8B /* DataController.swift */; };
+		1BE3A6C820A32FE700BBAA24 /* ArtworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE3A6C720A32FE700BBAA24 /* ArtworkViewController.swift */; };
+		1BE3A6CA20A47E7800BBAA24 /* ArtworkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE3A6C920A47E7800BBAA24 /* ArtworkDetailViewController.swift */; };
 		1BF4B17B200303AF00376A8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4B17A200303AF00376A8D /* AppDelegate.swift */; };
 		1BF4B17F200303AF00376A8D /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4B17E200303AF00376A8D /* PortfolioViewController.swift */; };
 		1BF4B182200303AF00376A8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4B180200303AF00376A8D /* Main.storyboard */; };
@@ -43,6 +45,8 @@
 		1BD9C75C2004182900022C8B /* SAKLogging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAKLogging.swift; sourceTree = "<group>"; };
 		1BD9C75F2004183200022C8B /* UIColor+SAK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SAK.swift"; sourceTree = "<group>"; };
 		1BD9C76620041B8C00022C8B /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		1BE3A6C720A32FE700BBAA24 /* ArtworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkViewController.swift; sourceTree = "<group>"; };
+		1BE3A6C920A47E7800BBAA24 /* ArtworkDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtworkDetailViewController.swift; sourceTree = "<group>"; };
 		1BF4B177200303AF00376A8D /* ArtPortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArtPortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BF4B17A200303AF00376A8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BF4B17E200303AF00376A8D /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
@@ -82,8 +86,8 @@
 		1BD9C75A2004173400022C8B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1B65F1E02006FFBD00F63446 /* PortfolioEntry.swift */,
 				1B20D117205353C90042960F /* Artist.swift */,
+				1B65F1E02006FFBD00F63446 /* PortfolioEntry.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -153,9 +157,11 @@
 		1BF4B19D2003046000376A8D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1BF8EC382097B96300856028 /* ArtistViewController.swift */,
+				1BE3A6C920A47E7800BBAA24 /* ArtworkDetailViewController.swift */,
+				1BE3A6C720A32FE700BBAA24 /* ArtworkViewController.swift */,
 				1BF4B17E200303AF00376A8D /* PortfolioViewController.swift */,
 				1B65F1E22007013200F63446 /* PortfolioCollectionViewCell.swift */,
-				1BF8EC382097B96300856028 /* ArtistViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -368,8 +374,10 @@
 				1BD9C76720041B8D00022C8B /* DataController.swift in Sources */,
 				1BF4B17B200303AF00376A8D /* AppDelegate.swift in Sources */,
 				1B20D118205353C90042960F /* Artist.swift in Sources */,
+				1BE3A6CA20A47E7800BBAA24 /* ArtworkDetailViewController.swift in Sources */,
 				1BD9C75D2004182900022C8B /* SAKDefaults.swift in Sources */,
 				1BF8EC392097B96300856028 /* ArtistViewController.swift in Sources */,
+				1BE3A6C820A32FE700BBAA24 /* ArtworkViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
