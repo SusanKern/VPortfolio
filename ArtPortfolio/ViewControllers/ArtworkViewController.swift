@@ -111,14 +111,4 @@ class ArtworkViewController: UIViewController {
         sizeButton.isHidden = (artwork.size == nil)
         materialsButton.isHidden = (artwork.materials == nil)
     }
-    
-    private func presentAlert(title: String, text: String) {
-        let alert = UIAlertController(title: title,
-                                      message: text,
-                                      preferredStyle: .alert)
-        let action = UIAlertAction(title: "Close", style: .default, handler: { (action) -> Void in
-        })
-        alert.addAction(action)
-        present(alert, animated: true, completion: nil)
-    }
 }

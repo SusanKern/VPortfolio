@@ -69,10 +69,6 @@ class PortfolioViewController: UIViewController, UICollectionViewDelegate, UICol
         viewController.artwork = entry
         //self.present(viewController, animated: true, completion: nil)
         self.navigationController?.pushViewController(viewController, animated: true)
-        
-        //let alert = UIAlertController(title: entry.title, message: nil, preferredStyle: .alert)
-        //alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        //present(alert, animated: true, completion: nil)
     }
     
     

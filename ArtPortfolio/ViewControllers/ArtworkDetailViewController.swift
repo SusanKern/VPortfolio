@@ -47,7 +47,7 @@ class ArtworkDetailViewController: UIViewController {
     // MARK: Presentation
     
     @objc func tappedView() {
-        //tappedDoneButton(_)
+        self.dismiss(animated: true, completion: nil)
     }
 
     

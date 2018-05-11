@@ -20,7 +20,7 @@ class PortfolioCollectionViewCell: ScalingCarouselCell {
         super.init(coder: aDecoder)
         
         self.layer.cornerRadius = 2
-        self.layer.borderWidth = 3
+        self.layer.borderWidth = 2
         self.layer.borderColor = UIColor.app_lightGrayColor().cgColor
     }
 }

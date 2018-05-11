@@ -20,9 +20,10 @@ class ArtistViewController: UIViewController {
     // MARK: IBOutlets
     
     @IBOutlet weak var artistImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var artistNavigationBar: UINavigationBar!
     @IBOutlet weak var bioTextView: UITextView!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     
     
     // MARK: ViewController life-cycle
@@ -32,6 +33,7 @@ class ArtistViewController: UIViewController {
         
         artistImageView.layer.borderColor = UIColor.app_whiteColor().cgColor
         artistImageView.layer.borderWidth = 2
+        artistNavigationBar.shadowImage = UIImage.imageWithColor(color: .white)
 
         guard let firstName = artist.firstName,
             let lastName = artist.lastName else { return }

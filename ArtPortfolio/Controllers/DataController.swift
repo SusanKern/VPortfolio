@@ -27,7 +27,7 @@ final class DataController {
                        dateCreated: Date(), 
                        materials: "Mixed media", 
                        size: "some size", 
-                       awards: "Scholastic Art & Writing Awards: American Visions Medal, Gold Medal"),
+                       awards: "Scholastic Art & Writing Awards: American Visions Medal, Gold Medal\nOn national tour 2018-19"),
         
         PortfolioEntry(title: "Imagination", 
                        imageName: "Imagination", 
@@ -102,11 +102,11 @@ final class DataController {
                        awards: "Trinity Academy Art Competition - Best in Show - 2016\nOn semi-permanent public art display at North Hills, Raleigh, NC"),
     ]
     
-    let artist = Artist(firstName: "Victoria", 
-                        lastName: "Kern", 
-                        email: "vkern@artist.com", 
+    let artist = Artist(firstName: "V", 
+                        lastName: " ", 
+                        email: "v@artist.com", 
                         imageName: ["VImage0", "VImage1", "VImage2"],
-                        bio: "Victoria is an award-winning artist, poet and actress (shown here in the lead role in 'Hello Dolly').  She loves being creative, and doesn't really love math.\n\nHer favorite activity is to sit and draw. She also loves volleyball and soccer.\n\nVictoria attends North Carolina State, as part of the Design school.")
+                        bio: "V is an award-winning artist, poet and actress (shown here in the lead role in 'Hello Dolly').  She loves being creative, and doesn't really love math.\n\nHer favorite activity is to sit and draw. She also loves volleyball and soccer.\n\n V attends the Design School at North Carolina State University.")
 }
      
     
