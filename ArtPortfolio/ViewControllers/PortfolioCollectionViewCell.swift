@@ -13,7 +13,7 @@ class PortfolioCollectionViewCell: ScalingCarouselCell {
     
     static let identifier = "PortfolioCollectionViewCell"
 
-    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
     required init?(coder aDecoder: NSCoder) {
