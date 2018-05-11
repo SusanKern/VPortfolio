@@ -29,7 +29,7 @@ class ArtworkDetailViewController: UIViewController {
 
         // Capture when user taps anywhere on screen
         let tapRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(tappedView))
-        self.view.addGestureRecognizer(tapRecognizer)
+        view.addGestureRecognizer(tapRecognizer)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,13 +49,13 @@ class ArtworkDetailViewController: UIViewController {
     // MARK: Navigation
     
     @objc func tappedView() {
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 
     
     // MARK: IBActions
     
     @IBAction func tappedDoneButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 }

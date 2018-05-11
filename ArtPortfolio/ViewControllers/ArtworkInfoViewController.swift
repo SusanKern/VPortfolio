@@ -39,7 +39,7 @@ class ArtworkInfoViewController: UIViewController {
         
         // Capture when user taps on artwork image
         let tapRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(tappedView))
-        self.imageView.addGestureRecognizer(tapRecognizer)
+        imageView.addGestureRecognizer(tapRecognizer)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,13 +64,13 @@ class ArtworkInfoViewController: UIViewController {
     // MARK: Presentation
     
     override func viewDidLayoutSubviews() {
-        if self.workaroundScrollBug {
+        if workaroundScrollBug {
             // UITextView will not start at top, and other suggested workarounds
             //   cause flashing once view appears. 
             DispatchQueue.main.async {
                 self.descriptionTextView.setContentOffset(CGPoint.zero, animated: false)
             }
-            self.workaroundScrollBug = false
+            workaroundScrollBug = false
         }
     }
     
@@ -78,7 +78,7 @@ class ArtworkInfoViewController: UIViewController {
     // MARK: IBActions
     
     @IBAction func tappedBackButton(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
     
     
@@ -113,7 +113,7 @@ class ArtworkInfoViewController: UIViewController {
     // MARK: Navigation
 
     @objc func tappedView() {
-        self.performSegue(withIdentifier: "ArtworkFullScreenSegue", sender: self)
+        performSegue(withIdentifier: "ArtworkFullScreenSegue", sender: self)
     }
     
     
@@ -122,8 +122,8 @@ class ArtworkInfoViewController: UIViewController {
     private func updateUI() {
         guard let artwork = artwork else { return }
         
-        self.navigationItem.title = artwork.title
-        self.title = artwork.title
+        navigationItem.title = artwork.title
+        title = artwork.title
 
         imageView.image = UIImage(named: artwork.imageName)
         descriptionTextView.text = artwork.description

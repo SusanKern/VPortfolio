@@ -15,6 +15,7 @@ class ArtistViewController: UIViewController {
     private var workaroundScrollBug = true
     private var imageIndex = 0
     private let artist =  DataController.sharedInstance.artist
+    private var timer: Timer!
 
 
     // MARK: IBOutlets
@@ -49,11 +50,11 @@ class ArtistViewController: UIViewController {
 
         // Capture when user taps anywhere on screen
         let tapRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(tappedView))
-        self.view.addGestureRecognizer(tapRecognizer)
+        view.addGestureRecognizer(tapRecognizer)
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        bioTextView.textContainerInset = UIEdgeInsets(top: 6, left: 10, bottom: 6, right: 10);
+        self.bioTextView.textContainerInset = UIEdgeInsets(top: 6, left: 10, bottom: 6, right: 10);
 
         log.info("Present Artist screen")
 
@@ -64,38 +65,59 @@ class ArtistViewController: UIViewController {
         super.viewDidAppear(animated)
 
         bioTextView.flashScrollIndicators()
+        
+        setTimer()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        timer.invalidate()
     }
     
     
     // MARK: Presentation
     
     override func viewDidLayoutSubviews() {
-        if self.workaroundScrollBug {
+        if workaroundScrollBug {
             // UITextView will not start at top, and other suggested workarounds
             //   cause flashing once view appears. 
             DispatchQueue.main.async {
                 self.bioTextView.setContentOffset(CGPoint.zero, animated: false)
             }
-            self.workaroundScrollBug = false
+            workaroundScrollBug = false
         }
     }
     
     @objc func tappedView() {
+        timer.invalidate()
+        self.transitionImage()
+        setTimer()
+    }
+    
+    
+    // MARK: Private functions
+    
+    @objc private func transitionImage() {
         imageIndex = imageIndex + 1 
         imageIndex = imageIndex == artist.imageName.count ? 0 : imageIndex
         
         let toImage = UIImage(named:artist.imageName[imageIndex])
-        UIView.transition(with: self.artistImageView,
+        UIView.transition(with: artistImageView,
                           duration: 0.5,
                           options: .transitionFlipFromRight,
                           animations: { self.artistImageView.image = toImage },
                           completion: nil)
+    }
+    
+    private func setTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(transitionImage), userInfo: nil, repeats: true)
     }
 
     
     // MARK: IBActions
     
     @IBAction func tappedDoneButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 }

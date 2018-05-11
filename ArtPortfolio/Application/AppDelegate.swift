@@ -67,7 +67,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white,
                                                             NSAttributedStringKey.font : UIFont(name: "Noteworthy-Light", size: 20)!]
-        UINavigationBar.appearance().shadowImage = UIImage.imageWithColor(color: .white)
+        UINavigationBar.appearance().shadowImage = UIImage.imageWithColor(color: .app_lightGrayColor())
         
         UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
         

@@ -26,21 +26,21 @@ class ArtworkFullScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.scrollView.minimumZoomScale = 0.7
-        self.scrollView.maximumZoomScale = 10.0
-        self.scrollView.contentSize = self.imageView.frame.size;
-        self.scrollView.delegate = self;  
+        scrollView.minimumZoomScale = 0.7
+        scrollView.maximumZoomScale = 10.0
+        scrollView.contentSize = self.imageView.frame.size;
+        scrollView.delegate = self;  
         
         // Capture when user taps anywhere on screen
         let tapRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(tappedView))
-        self.view.addGestureRecognizer(tapRecognizer)
+        view.addGestureRecognizer(tapRecognizer)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if let imageName = self.imageName {
-            self.imageView.image = UIImage(named: imageName)
+            imageView.image = UIImage(named: imageName)
             
             log.info("Present Artwork Full screen for \(imageName)")
         }
@@ -50,7 +50,7 @@ class ArtworkFullScreenViewController: UIViewController {
     // MARK: Navigation
 
     @objc func tappedView() {
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 }
 
@@ -60,6 +60,6 @@ class ArtworkFullScreenViewController: UIViewController {
 extension ArtworkFullScreenViewController: UIScrollViewDelegate {
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        return self.imageView
+        return imageView
     }
 }

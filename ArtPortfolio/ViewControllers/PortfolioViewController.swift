@@ -28,7 +28,7 @@ class PortfolioViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.items = DataController.sharedInstance.portfolioContent
+        items = DataController.sharedInstance.portfolioContent
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -68,9 +68,9 @@ extension PortfolioViewController: UICollectionViewDataSource, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let entry = items[((indexPath as NSIndexPath).row) % items.count]
         
-        let viewController : ArtworkInfoViewController = self.storyboard!.instantiateViewController(withIdentifier: "ArtworkInfoViewController") as! ArtworkInfoViewController
+        let viewController : ArtworkInfoViewController = storyboard!.instantiateViewController(withIdentifier: "ArtworkInfoViewController") as! ArtworkInfoViewController
         viewController.artwork = entry
-        self.navigationController?.pushViewController(viewController, animated: true)
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
     

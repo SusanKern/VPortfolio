@@ -19,13 +19,13 @@ class PortfolioCollectionViewCell: ScalingCarouselCell {
     @IBOutlet weak var titleLabel: UILabel!
 
     
-    // MARK: Lifecycle
+    // MARK: Life-cycle
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        self.layer.cornerRadius = 2
-        self.layer.borderWidth = 2
-        self.layer.borderColor = UIColor.app_lightGrayColor().cgColor
+        layer.cornerRadius = 2
+        layer.borderWidth = 2
+        layer.borderColor = UIColor.app_lightGrayColor().cgColor
     }
 }
