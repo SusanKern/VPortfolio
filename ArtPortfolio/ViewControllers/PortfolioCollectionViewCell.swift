@@ -13,8 +13,13 @@ class PortfolioCollectionViewCell: ScalingCarouselCell {
     
     static let identifier = "PortfolioCollectionViewCell"
 
+    // MARK: IBOutlets
+
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+
+    
+    // MARK: Lifecycle
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

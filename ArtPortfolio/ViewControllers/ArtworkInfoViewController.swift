@@ -1,5 +1,5 @@
 //
-//  ArtworkViewController.swift
+//  ArtworkInfoViewController.swift
 //  ArtPortfolio
 //
 //  Created by Susan Kern on 5/9/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ArtworkViewController: UIViewController {
+class ArtworkInfoViewController: UIViewController {
 
     // MARK: Private variables
     
@@ -36,6 +36,10 @@ class ArtworkViewController: UIViewController {
 
         imageView.layer.borderColor = UIColor.app_whiteColor().cgColor
         imageView.layer.borderWidth = 2
+        
+        // Capture when user taps on artwork image
+        let tapRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(tappedView))
+        self.imageView.addGestureRecognizer(tapRecognizer)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,7 +52,10 @@ class ArtworkViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        log.info("Present Artwork screen")
+        
+        if let artwork = artwork {
+            log.info("Present Artwork Info screen for \(artwork.title)")
+        }
         
         descriptionTextView.flashScrollIndicators()
     }
@@ -67,6 +74,7 @@ class ArtworkViewController: UIViewController {
         }
     }
     
+    
     // MARK: IBActions
     
     @IBAction func tappedBackButton(_ sender: Any) {
@@ -77,22 +85,35 @@ class ArtworkViewController: UIViewController {
     // MARK: Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let viewController = segue.destination as? ArtworkDetailViewController,
-            let artwork = artwork else { return }
-        
-        switch segue.identifier {
-        case "ArtworkSizeSegue":
-            viewController.heading = "Size"
-            viewController.text = artwork.size
-        case "ArtworkMaterialsSegue":
-            viewController.heading = "Materials"
-            viewController.text = artwork.materials            
-        case "ArtworkAwardsSegue":
-            viewController.heading = "Awards"
-            viewController.text = artwork.awards       
-        default:
-            return
+        if let detailsViewController = segue.destination as? ArtworkDetailViewController,
+            let artwork = artwork {
+            switch segue.identifier {
+            case "ArtworkSizeSegue":
+                detailsViewController.heading = "Size"
+                detailsViewController.text = artwork.size
+            case "ArtworkMaterialsSegue":
+                detailsViewController.heading = "Materials"
+                detailsViewController.text = artwork.materials            
+            case "ArtworkAwardsSegue":
+                detailsViewController.heading = "Awards"
+                detailsViewController.text = artwork.awards    
+            case "ArtworkFullScreenSegue":
+                detailsViewController.heading = "Awards"
+                detailsViewController.text = artwork.awards   
+            default:
+                return
+            }
+        } else if let fullScreenViewController = segue.destination as? ArtworkFullScreenViewController,
+            let artwork = artwork {
+            fullScreenViewController.imageName = artwork.imageName
         }
+    }
+    
+    
+    // MARK: Navigation
+
+    @objc func tappedView() {
+        self.performSegue(withIdentifier: "ArtworkFullScreenSegue", sender: self)
     }
     
     

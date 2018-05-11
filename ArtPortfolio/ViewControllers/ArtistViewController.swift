@@ -55,12 +55,13 @@ class ArtistViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         bioTextView.textContainerInset = UIEdgeInsets(top: 6, left: 10, bottom: 6, right: 10);
 
+        log.info("Present Artist screen")
+
         super.viewWillAppear(animated)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        log.info("Present Info screen")
 
         bioTextView.flashScrollIndicators()
     }

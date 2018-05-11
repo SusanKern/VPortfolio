@@ -9,7 +9,7 @@
 import UIKit
 import ScalingCarousel
 
-class PortfolioViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class PortfolioViewController: UIViewController  {
 
     // MARK: IBOutlets
     
@@ -41,9 +41,12 @@ class PortfolioViewController: UIViewController, UICollectionViewDelegate, UICol
             firstPass = false
         }
     }
+}
 
-    
-    // MARK: Collection DataSource
+
+// MARK: UICollectionViewDataSource
+
+extension PortfolioViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -57,7 +60,7 @@ class PortfolioViewController: UIViewController, UICollectionViewDelegate, UICol
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PortfolioCollectionViewCell.identifier, for: indexPath) as! PortfolioCollectionViewCell
         let entry = items[((indexPath as NSIndexPath).row) % items.count]  // "% items.count" allows scrolling to roll over
-        cell.image.image = UIImage(named: entry.imageName)
+        cell.imageView.image = UIImage(named: entry.imageName)
         cell.titleLabel.text = entry.title
         return cell
     }
@@ -65,17 +68,18 @@ class PortfolioViewController: UIViewController, UICollectionViewDelegate, UICol
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let entry = items[((indexPath as NSIndexPath).row) % items.count]
         
-        let viewController : ArtworkViewController = self.storyboard!.instantiateViewController(withIdentifier: "ArtworkViewController") as! ArtworkViewController
+        let viewController : ArtworkInfoViewController = self.storyboard!.instantiateViewController(withIdentifier: "ArtworkInfoViewController") as! ArtworkInfoViewController
         viewController.artwork = entry
-        //self.present(viewController, animated: true, completion: nil)
         self.navigationController?.pushViewController(viewController, animated: true)
     }
+}
     
-    
-    // MARK: UIScrollViewDelegate
-    
+
+// MARK: UIScrollViewDelegate
+
+extension PortfolioViewController: UIScrollViewDelegate {
+
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         collectionView.didScroll()
     }
 }
-

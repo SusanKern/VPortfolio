@@ -45,10 +45,10 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i32-yg-irG">
-                                                            <rect key="frame" x="0.0" y="0.0" width="200" height="244.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="200" height="244"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5T-Z1-83i">
-                                                            <rect key="frame" x="8" y="252.5" width="184" height="35.5"/>
+                                                            <rect key="frame" x="8" y="252" width="184" height="36"/>
                                                             <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="22"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -59,8 +59,8 @@
                                                         <constraint firstAttribute="bottom" secondItem="D5T-Z1-83i" secondAttribute="bottom" constant="12" id="1Jw-HQ-IRo"/>
                                                         <constraint firstItem="i32-yg-irG" firstAttribute="leading" secondItem="GJu-6X-nqC" secondAttribute="leading" id="4hf-Ft-MAX"/>
                                                         <constraint firstItem="D5T-Z1-83i" firstAttribute="top" secondItem="i32-yg-irG" secondAttribute="bottom" constant="8" id="9EF-nS-nL2"/>
-                                                        <constraint firstAttribute="trailing" secondItem="D5T-Z1-83i" secondAttribute="trailing" constant="8" id="9nu-im-G9h"/>
                                                         <constraint firstAttribute="trailing" secondItem="i32-yg-irG" secondAttribute="trailing" id="Xs2-yj-6Sl"/>
+                                                        <constraint firstAttribute="trailing" secondItem="D5T-Z1-83i" secondAttribute="trailing" constant="8" id="fpF-28-ONr"/>
                                                         <constraint firstItem="i32-yg-irG" firstAttribute="top" secondItem="GJu-6X-nqC" secondAttribute="top" id="oyp-eG-UMv"/>
                                                         <constraint firstItem="D5T-Z1-83i" firstAttribute="leading" secondItem="GJu-6X-nqC" secondAttribute="leading" constant="8" id="uQL-68-XXL"/>
                                                     </constraints>
@@ -75,7 +75,7 @@
                                             <constraint firstItem="GJu-6X-nqC" firstAttribute="top" secondItem="ZkO-Uc-lBZ" secondAttribute="top" id="vLc-ht-kZP"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="image" destination="i32-yg-irG" id="RhS-cy-Pw2"/>
+                                            <outlet property="imageView" destination="i32-yg-irG" id="yYw-ES-lxq"/>
                                             <outlet property="mainView" destination="GJu-6X-nqC" id="ABj-ml-89z"/>
                                             <outlet property="titleLabel" destination="D5T-Z1-83i" id="JOV-u1-qy4"/>
                                         </connections>
@@ -107,9 +107,9 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="V's Portfolio" id="e6h-ek-Ani">
-                        <barButtonItem key="rightBarButtonItem" image="info" id="4Zv-hb-uW3">
+                        <barButtonItem key="rightBarButtonItem" image="palette" id="4Zv-hb-uW3">
                             <connections>
-                                <segue destination="A8k-zO-Mc7" kind="presentation" id="nd1-td-bBu"/>
+                                <segue destination="A8k-zO-Mc7" kind="presentation" id="Fti-dB-iUr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -232,10 +232,10 @@
             </objects>
             <point key="canvasLocation" x="-348" y="384"/>
         </scene>
-        <!-- -->
+        <!--Artwork Info View Controller-->
         <scene sceneID="sn2-Br-Nu9">
             <objects>
-                <viewController storyboardIdentifier="ArtworkViewController" id="AQ9-g3-chL" customClass="ArtworkViewController" customModule="ArtPortfolio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArtworkInfoViewController" id="AQ9-g3-chL" userLabel="Artwork Info View Controller" customClass="ArtworkInfoViewController" customModule="ArtPortfolio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QE9-yz-l66">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -247,7 +247,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vgW-Rs-geQ">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vgW-Rs-geQ">
                                 <rect key="frame" x="0.0" y="70" width="250" height="250"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
@@ -267,7 +267,7 @@
                                 <rect key="frame" x="250" y="70" width="125" height="250"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igt-yq-NZq">
-                                        <rect key="frame" x="0.0" y="0.0" width="125" height="83.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="62.5"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
                                         <state key="normal" title="Size">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -277,7 +277,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acm-KV-gcd">
-                                        <rect key="frame" x="0.0" y="83.5" width="125" height="83"/>
+                                        <rect key="frame" x="0.0" y="62.5" width="125" height="62.5"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
                                         <state key="normal" title="Materials">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -287,13 +287,23 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJf-iX-UEg">
-                                        <rect key="frame" x="0.0" y="166.5" width="125" height="83.5"/>
+                                        <rect key="frame" x="0.0" y="125" width="125" height="62.5"/>
                                         <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
                                         <state key="normal" title="Awards">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <segue destination="Byh-N1-Bwr" kind="presentation" identifier="ArtworkAwardsSegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="DWt-t2-Wjl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUa-Fg-Ch7">
+                                        <rect key="frame" x="0.0" y="187.5" width="125" height="62.5"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                        <state key="normal" title="Full Screen">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="TEC-1w-Aq2" kind="presentation" identifier="ArtworkFullScreenSegue" modalTransitionStyle="crossDissolve" id="eed-9H-F4u"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -429,6 +439,54 @@
             </objects>
             <point key="canvasLocation" x="2685.5999999999999" y="681.40929535232385"/>
         </scene>
+        <!--Artwork Full Screen View Controller-->
+        <scene sceneID="18O-XM-GIu">
+            <objects>
+                <viewController id="TEC-1w-Aq2" customClass="ArtworkFullScreenViewController" customModule="ArtPortfolio" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="szN-iU-xkF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FT4-hz-1L9">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="FloralFurniture" translatesAutoresizingMaskIntoConstraints="NO" id="sfZ-wB-aSW">
+                                        <rect key="frame" x="0.0" y="-20" width="375" height="687"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="sfZ-wB-aSW" secondAttribute="trailing" id="N95-Wv-1lw"/>
+                                    <constraint firstItem="sfZ-wB-aSW" firstAttribute="leading" secondItem="FT4-hz-1L9" secondAttribute="leading" id="ecm-TY-2Jl"/>
+                                    <constraint firstItem="sfZ-wB-aSW" firstAttribute="top" secondItem="FT4-hz-1L9" secondAttribute="top" id="g8n-n8-504"/>
+                                    <constraint firstAttribute="bottom" secondItem="sfZ-wB-aSW" secondAttribute="bottom" constant="-20" id="tMl-3D-iGh"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="TEC-1w-Aq2" id="JZG-y8-O4w"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sfZ-wB-aSW" firstAttribute="width" secondItem="szN-iU-xkF" secondAttribute="width" id="AWJ-Tf-8aa"/>
+                            <constraint firstItem="FT4-hz-1L9" firstAttribute="leading" secondItem="szN-iU-xkF" secondAttribute="leading" id="KL9-hn-iSm"/>
+                            <constraint firstItem="sfZ-wB-aSW" firstAttribute="height" secondItem="szN-iU-xkF" secondAttribute="height" constant="20" id="dEP-ki-GS6"/>
+                            <constraint firstItem="2gd-rp-uaT" firstAttribute="bottom" secondItem="FT4-hz-1L9" secondAttribute="bottom" id="dMp-hI-TOL"/>
+                            <constraint firstAttribute="trailing" secondItem="FT4-hz-1L9" secondAttribute="trailing" id="hRb-nP-5pg"/>
+                            <constraint firstItem="FT4-hz-1L9" firstAttribute="top" secondItem="szN-iU-xkF" secondAttribute="top" id="rbF-vj-2Kc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2gd-rp-uaT"/>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="imageView" destination="sfZ-wB-aSW" id="ASW-uE-XqT"/>
+                        <outlet property="scrollView" destination="FT4-hz-1L9" id="enK-9A-65Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iQw-2x-xK0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3412" y="680.5097451274363"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Igc-AP-ceb">
             <objects>
@@ -449,8 +507,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="FloralFurniture" width="2008" height="2510"/>
         <image name="arrowLeft" width="10" height="18"/>
-        <image name="info" width="22" height="22"/>
+        <image name="palette" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dhE-9g-afO"/>

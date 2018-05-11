@@ -37,6 +37,8 @@ class ArtworkDetailViewController: UIViewController {
         
         if let heading = heading {
             headingLabel.text = heading
+            
+            log.info("Present Artwork Detail screen for \(heading)")
         }
         if let text = text {
             textLabel.text = text
@@ -44,7 +46,7 @@ class ArtworkDetailViewController: UIViewController {
     }
     
     
-    // MARK: Presentation
+    // MARK: Navigation
     
     @objc func tappedView() {
         self.dismiss(animated: true, completion: nil)
