@@ -100,8 +100,32 @@ final class DataController {
                        materials: "Watercolor and ink", 
                        size: "some size", 
                        awards: "Trinity Academy Art Competition - Best in Show - 2016\nOn semi-permanent public art display at North Hills, Raleigh, NC"),
-    ]
-    
+        
+        PortfolioEntry(title: "Treefrog", 
+                       imageName: "TreeFrog", 
+                       description: "Blah.", 
+                       dateCreated: Date(), 
+                       materials: "Sharpie", 
+                       size: "some size", 
+                       awards: nil),
+        
+        PortfolioEntry(title: "Window", 
+                       imageName: "Window", 
+                       description: "Blah.", 
+                       dateCreated: Date(), 
+                       materials: "Resin, Acrylic", 
+                       size: "some size", 
+                       awards: nil),
+        
+        
+        PortfolioEntry(title: "Florida views", 
+                       imageName: "FloridaViews", 
+                       description: "Melbourne", 
+                       dateCreated: Date(), 
+                       materials: "Spraypaint, cardboard", 
+                       size: "some size", 
+                       awards: nil),
+        ]
     let artist = Artist(firstName: "V", 
                         lastName: " ", 
                         email: "v@artist.com", 
