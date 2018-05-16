@@ -10,6 +10,9 @@
 		1B20D118205353C90042960F /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B20D117205353C90042960F /* Artist.swift */; };
 		1B65F1E12006FFBD00F63446 /* PortfolioEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B65F1E02006FFBD00F63446 /* PortfolioEntry.swift */; };
 		1B65F1E32007013200F63446 /* PortfolioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B65F1E22007013200F63446 /* PortfolioCollectionViewCell.swift */; };
+		1B939E0820ACA5B800EC5715 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9C76620041B8C00022C8B /* DataController.swift */; };
+		1B939E0920ACA5BC00EC5715 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B20D117205353C90042960F /* Artist.swift */; };
+		1B939E0A20ACA5C000EC5715 /* PortfolioEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B65F1E02006FFBD00F63446 /* PortfolioEntry.swift */; };
 		1B97CB5C20A6042700FA3893 /* ArtworkFullScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B97CB5B20A6042700FA3893 /* ArtworkFullScreenViewController.swift */; };
 		1B97CB5E20AB522200FA3893 /* SAKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B97CB5D20AB522200FA3893 /* SAKImageView.swift */; };
 		1B97CB5F20AB522200FA3893 /* SAKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B97CB5D20AB522200FA3893 /* SAKImageView.swift */; };
@@ -398,7 +401,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B939E0A20ACA5C000EC5715 /* PortfolioEntry.swift in Sources */,
 				1B97CB5F20AB522200FA3893 /* SAKImageView.swift in Sources */,
+				1B939E0820ACA5B800EC5715 /* DataController.swift in Sources */,
+				1B939E0920ACA5BC00EC5715 /* Artist.swift in Sources */,
 				1BF4B192200303AF00376A8D /* ArtPortfolioTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -596,7 +602,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArtPortfolio.app/ArtPortfolio";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/V Portfolio.app/V Portfolio";
 			};
 			name = Debug;
 		};
@@ -613,7 +619,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArtPortfolio.app/ArtPortfolio";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/V Portfolio.app/V Portfolio";
 			};
 			name = Release;
 		};
