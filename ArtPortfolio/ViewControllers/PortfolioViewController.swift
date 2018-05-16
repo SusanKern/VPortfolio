@@ -18,9 +18,9 @@ class PortfolioViewController: UIViewController  {
     
     // MARK: Private variables
     
-    private var items = [PortfolioEntry]()
-    private let superSizeForRolloverScrolling = 10000000
-    private var firstPass = true
+    private var _items = [PortfolioEntry]()
+    private let _superSizeForRolloverScrolling = 10000000
+    private var _firstPass = true
 
     
     // MARK: ViewController life cycle
@@ -28,17 +28,17 @@ class PortfolioViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        items = DataController.sharedInstance.portfolioContent
+        _items = DataController.sharedInstance.portfolioContent
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if (firstPass) {
+        if (_firstPass) {
             // Start in the middle of the super-large list of images, so scrolling will be "infinite" in either direction
-            let midIndexPath = IndexPath(row: items.count * 100, section: 0)
+            let midIndexPath = IndexPath(row: _items.count * 100, section: 0)
             collectionView.scrollToItem(at: midIndexPath, at: .left, animated: false)
-            firstPass = false
+            _firstPass = false
         }
     }
 }
@@ -54,19 +54,19 @@ extension PortfolioViewController: UICollectionViewDataSource, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // Set up super large list of images, to allow scrolling to roll over and be "infinite" in either direction
-        return superSizeForRolloverScrolling
+        return _superSizeForRolloverScrolling
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PortfolioCollectionViewCell.identifier, for: indexPath) as! PortfolioCollectionViewCell
-        let entry = items[((indexPath as NSIndexPath).row) % items.count]  // "% items.count" allows scrolling to roll over
+        let entry = _items[((indexPath as NSIndexPath).row) % _items.count]  // "% _items.count" allows scrolling to roll over
         cell.imageView.image = UIImage(named: entry.imageName)
         cell.titleLabel.text = entry.title
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let entry = items[((indexPath as NSIndexPath).row) % items.count]
+        let entry = _items[((indexPath as NSIndexPath).row) % _items.count]
         
         let viewController : ArtworkInfoViewController = storyboard!.instantiateViewController(withIdentifier: "ArtworkInfoViewController") as! ArtworkInfoViewController
         viewController.artwork = entry

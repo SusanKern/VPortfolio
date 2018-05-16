@@ -10,11 +10,15 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
-
-    // MARK: Private variables
-    var window: UIWindow?
     
-    fileprivate var dataController: DataController = {
+    // MARK: Public variables
+    
+    var window: UIWindow?
+
+    
+    // MARK: Private variables
+    
+    fileprivate var _dataController: DataController = {
         return DataController()
     }()
     
@@ -82,7 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
 extension DataController {
     static var sharedInstance: DataController {
-        return (UIApplication.shared.delegate as! AppDelegate).dataController
+        return (UIApplication.shared.delegate as! AppDelegate)._dataController
     }
 }
 

@@ -26,6 +26,5 @@ extension UIColor {
     static func app_darkGrayColor() -> UIColor { return UIColor("808080")! }
     static func app_mediumBlueColor() -> UIColor { return UIColor("5B5BC0")! }
     static func app_darkBlueColor() -> UIColor { return UIColor("191970")! }
-    static func app_whiteColor() -> UIColor { return UIColor("ffffff")! }
 }
 

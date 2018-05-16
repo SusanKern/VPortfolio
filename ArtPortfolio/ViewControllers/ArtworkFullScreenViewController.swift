@@ -28,7 +28,7 @@ class ArtworkFullScreenViewController: UIViewController {
 
         scrollView.minimumZoomScale = 0.7
         scrollView.maximumZoomScale = 10.0
-        scrollView.contentSize = self.imageView.frame.size;
+        scrollView.contentSize = imageView.frame.size;
         scrollView.delegate = self;  
         
         // Capture when user taps anywhere on screen
@@ -39,7 +39,7 @@ class ArtworkFullScreenViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if let imageName = self.imageName {
+        if let imageName = imageName {
             imageView.image = UIImage(named: imageName)
             
             log.info("Present Artwork Full screen for \(imageName)")

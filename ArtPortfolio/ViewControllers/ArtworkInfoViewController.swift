@@ -12,7 +12,7 @@ class ArtworkInfoViewController: UIViewController {
 
     // MARK: Private variables
     
-    private var workaroundScrollBug = true   
+    private var _workaroundScrollBug = true   
     
     
     // MARK: Public variables
@@ -34,7 +34,7 @@ class ArtworkInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        imageView.layer.borderColor = UIColor.app_whiteColor().cgColor
+        imageView.layer.borderColor = UIColor.white.cgColor
         imageView.layer.borderWidth = 2
         
         // Capture when user taps on artwork image
@@ -64,13 +64,13 @@ class ArtworkInfoViewController: UIViewController {
     // MARK: Presentation
     
     override func viewDidLayoutSubviews() {
-        if workaroundScrollBug {
+        if _workaroundScrollBug {
             // UITextView will not start at top, and other suggested workarounds
             //   cause flashing once view appears. 
             DispatchQueue.main.async {
                 self.descriptionTextView.setContentOffset(CGPoint.zero, animated: false)
             }
-            workaroundScrollBug = false
+            _workaroundScrollBug = false
         }
     }
     

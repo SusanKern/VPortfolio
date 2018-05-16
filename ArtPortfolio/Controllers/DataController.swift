@@ -117,7 +117,6 @@ final class DataController {
                        size: "some size", 
                        awards: nil),
         
-        
         PortfolioEntry(title: "Florida views", 
                        imageName: "FloridaViews", 
                        description: "Melbourne", 
@@ -126,10 +125,11 @@ final class DataController {
                        size: "some size", 
                        awards: nil),
         ]
+    
     let artist = Artist(firstName: "V", 
                         lastName: " ", 
                         email: "v@artist.com", 
-                        imageName: ["VImage0", "VImage1", "VImage2"],
+                        imageNames: ["VImage0", "VImage1", "VImage2"],
                         bio: "V is an award-winning artist, poet and actress (shown here in the lead role in 'Hello Dolly').  She loves being creative, and doesn't really love math.\n\nHer favorite activity is to sit and draw. She also loves volleyball and soccer.\n\n V attends the Design School at North Carolina State University.")
 }
      
