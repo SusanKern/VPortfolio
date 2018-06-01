@@ -14,6 +14,7 @@ class ArtistViewController: UIViewController {
     
     private var _workaroundScrollBug = true
     private let _artist =  DataController.sharedInstance.artist
+    private let _artistImages =  DataController.sharedInstance.artistImages
 
 
     // MARK: IBOutlets
@@ -37,11 +38,7 @@ class ArtistViewController: UIViewController {
         nameLabel.text = "\(firstName) \(lastName)"
         emailLabel.text = _artist.email
         
-        if let bioText = _artist.bio {
-            bioTextView.text = bioText
-        } else {
-            bioTextView.text = ""
-        }
+        bioTextView.text = _artist.bio ?? ""
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,14 +49,13 @@ class ArtistViewController: UIViewController {
         
         artistImageView.borderColor = UIColor.white
         artistImageView.borderWidth = 2
-        artistImageView.imageNamesArray = _artist.imageNames
+        artistImageView.images = _artistImages
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
         bioTextView.flashScrollIndicators()
-        
     }
     
     

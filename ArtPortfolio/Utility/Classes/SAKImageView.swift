@@ -12,20 +12,20 @@ class SAKImageView: UIImageView {
     
     // MARK: Public variables
     
-    var imageNamesArray: Array<String>? {
+    var images: Array<UIImage>? {
         get {
-            return _imageNamesArray
+            return _images
         }
         set {
-            _imageNamesArray = newValue
-            if let _imageNamesArray = _imageNamesArray,
-                _imageNamesArray.count > 0 {
-                image = UIImage(named: _imageNamesArray[0])
+            _images = newValue
+            if let _images = _images,
+                _images.count > 0 {
+                image = _images[0]
             }
         }
     }
     
-    var imageTime = 2.5
+    var swapTimeInSeconds = 2.5
     
     
     // MARK: IBInspectable variables
@@ -67,7 +67,7 @@ class SAKImageView: UIImageView {
     
     // MARK: Private variables
     
-    private var _imageNamesArray: Array<String>? 
+    private var _images: Array<UIImage>? 
     private var _imageIndex = 0
     private var _timer: Timer!
     
@@ -106,17 +106,17 @@ class SAKImageView: UIImageView {
     // MARK: Private methods
     
     private func setTimer() {
-        _timer = Timer.scheduledTimer(timeInterval: imageTime, target: self, selector: #selector(transitionImage), userInfo: nil, repeats: true)
+        _timer = Timer.scheduledTimer(timeInterval: swapTimeInSeconds, target: self, selector: #selector(transitionImage), userInfo: nil, repeats: true)
     }
         
     @objc private func transitionImage() {
-        guard let _imageNamesArray = _imageNamesArray,
-            _imageNamesArray.count > 1 else { return }
+        guard let _images = _images,
+            _images.count > 1 else { return }
         
         _imageIndex = _imageIndex + 1 
-        _imageIndex = _imageIndex == _imageNamesArray.count ? 0 : _imageIndex
+        _imageIndex = _imageIndex == _images.count ? 0 : _imageIndex
         
-        let toImage = UIImage(named: _imageNamesArray[_imageIndex])
+        let toImage = _images[_imageIndex]
         UIView.transition(with: self,
                           duration: 0.5,
                           options: .transitionFlipFromRight,

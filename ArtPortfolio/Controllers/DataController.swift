@@ -11,6 +11,12 @@ import Firebase
 
 final class DataController {
     
+    // MARK: Private variables
+    
+    private var _databaseReference: DatabaseReference!
+    private var _storageReference: StorageReference!
+
+    
     // MARK: Public variables
     
     var artist = Artist(firstName: "~ Unknown", 
@@ -18,6 +24,8 @@ final class DataController {
                         email: " ", 
                         imageNames: ["artistPlaceholder"],
                         bio: " ")
+    
+    var artistImages: [UIImage]? = Array()
 
     let portfolioContent = [
         PortfolioEntry(title: "NY Apartments", 
@@ -134,38 +142,62 @@ final class DataController {
         ]
     
     init() {
-        /*
-        self.artist = Artist(firstName: "V", 
-                        lastName: " ", 
-                        email: "v@artist.com", 
-                        imageNames: ["VImage0", "VImage1", "VImage2"],
-                        bio: "V is an award-winning artist, poet and actress (shown here in the lead role in 'Hello Dolly').  She loves being creative, and doesn't really love math.\n\nHer favorite activity is to sit and draw. She also loves volleyball and soccer.\n\n V attends the Design School at North Carolina State University.")
-         */
-        
-        // Connect to Firebase
+        // Connect to Firebase Realtime Database and Storage
         FirebaseApp.configure()
+        _databaseReference = Database.database().reference()
+        let storage = Storage.storage()
+        _storageReference = storage.reference()
         
-        var databaseReference: DatabaseReference!
-        databaseReference = Database.database().reference()
-
-        databaseReference.child("artist").observeSingleEvent(of: .value, with: { (snapshot) in
+        // Populate app data 
+        populateArtist()
+    }
+    
+    
+    // MARK: Private functions
+    
+    private func populateArtist() {
+        _databaseReference.child("artist").observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
-            
             let firstName = value?["firstName"] as? String ?? " "
             let lastName = value?["lastName"] as? String ?? " "
             let email = value?["email"] as? String ?? " "
             let imageDictionary = value?["imageNames"] as? Dictionary<String, Bool> ?? ["placeholder": true]
             let imageNamesArray = [String](imageDictionary.keys).sorted(by: <)  // Store images in alphabetical order
-
+            
             self.artist = Artist(firstName: firstName, 
                                  lastName: lastName, 
                                  email: email, 
                                  imageNames: imageNamesArray,
                                  bio: value?["bio"] as? String ?? " ")
-            log.info("Found Artist. Name: \(firstName) \(lastName), email: \(email), images: \(imageNamesArray)")
+            log.info("Found Artist - name: \(firstName) \(lastName), email: \(email), images: \(imageNamesArray)")
+            
+            for imageName in imageNamesArray {
+                // Create a reference to the file to download from Firebase Storage
+                let imageRef = self._storageReference.child("ArtistImages/\(imageName).jpg")
+                
+                // Download in memory with a maximum allowed size of 3MB (3 * 1024 * 1024 bytes)
+                // Note that images will be placed in array in order they complete downloading.
+                imageRef.getData(maxSize: 3 * 1024 * 1024) { data, error in
+                    if let error = error {
+                        log.error(error.localizedDescription)
+                        log.info("Failed to download artist image named: \(imageName). Adding placeholder image.")
+                        self.artistImages?.append(UIImage(named: "artistPlaceholder")!)
+                    } else {
+                        if let image = UIImage(data: data!) {
+                            self.artistImages?.append(image)
+                            log.info("Downloaded artist image named: \(imageName)")
+                        }
+                    }
+                }
+            }
+            
+            if imageNamesArray.count == 0 {
+                log.info("No artist image names provided. Adding placeholder image.")
+                self.artistImages?.append(UIImage(named: "artistPlaceholder")!)
+            }
             
         }) { (error) in
-            print(error.localizedDescription)
+            log.error(error.localizedDescription)
         }
     }
 }
