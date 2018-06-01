@@ -5,5 +5,7 @@ target 'ArtPortfolio' do
     pod 'SwiftyBeaver'
     pod 'HexColors'
     pod 'ScalingCarousel'
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
 end
 

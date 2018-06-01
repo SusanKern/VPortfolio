@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         
         // Appearance
         self.customizeAppearance(application)
-        
+                
         return true
     }
 

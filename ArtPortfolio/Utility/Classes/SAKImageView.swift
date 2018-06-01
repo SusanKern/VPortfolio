@@ -110,7 +110,8 @@ class SAKImageView: UIImageView {
     }
         
     @objc private func transitionImage() {
-        guard let _imageNamesArray = _imageNamesArray else { return }
+        guard let _imageNamesArray = _imageNamesArray,
+            _imageNamesArray.count > 1 else { return }
         
         _imageIndex = _imageIndex + 1 
         _imageIndex = _imageIndex == _imageNamesArray.count ? 0 : _imageIndex

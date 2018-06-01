@@ -13,6 +13,8 @@
 		1B939E0820ACA5B800EC5715 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9C76620041B8C00022C8B /* DataController.swift */; };
 		1B939E0920ACA5BC00EC5715 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B20D117205353C90042960F /* Artist.swift */; };
 		1B939E0A20ACA5C000EC5715 /* PortfolioEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B65F1E02006FFBD00F63446 /* PortfolioEntry.swift */; };
+		1B939E3C20C04E8600EC5715 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B939E3B20C04E8600EC5715 /* GoogleService-Info.plist */; };
+		1B939E3D20C04E8F00EC5715 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B939E3B20C04E8600EC5715 /* GoogleService-Info.plist */; };
 		1B97CB5C20A6042700FA3893 /* ArtworkFullScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B97CB5B20A6042700FA3893 /* ArtworkFullScreenViewController.swift */; };
 		1B97CB5E20AB522200FA3893 /* SAKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B97CB5D20AB522200FA3893 /* SAKImageView.swift */; };
 		1B97CB5F20AB522200FA3893 /* SAKImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B97CB5D20AB522200FA3893 /* SAKImageView.swift */; };
@@ -31,7 +33,7 @@
 		1BF4B192200303AF00376A8D /* ArtPortfolioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF4B191200303AF00376A8D /* ArtPortfolioTests.swift */; };
 		1BF4B1A02003148000376A8D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 1BF4B19F2003148000376A8D /* Podfile */; };
 		1BF8EC392097B96300856028 /* ArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF8EC382097B96300856028 /* ArtistViewController.swift */; };
-		509DE1D217B14B6CBFA3C861 /* Pods_ArtPortfolio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F112DF565C626360A700D48 /* Pods_ArtPortfolio.framework */; };
+		A323AD159C81DBC1F8034689 /* Pods_ArtPortfolio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2F5402F38A3420AD0E06AEB /* Pods_ArtPortfolio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,7 @@
 		1B20D117205353C90042960F /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		1B65F1E02006FFBD00F63446 /* PortfolioEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioEntry.swift; sourceTree = "<group>"; };
 		1B65F1E22007013200F63446 /* PortfolioCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCollectionViewCell.swift; sourceTree = "<group>"; };
+		1B939E3B20C04E8600EC5715 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1B97CB5B20A6042700FA3893 /* ArtworkFullScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkFullScreenViewController.swift; sourceTree = "<group>"; };
 		1B97CB5D20AB522200FA3893 /* SAKImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAKImageView.swift; sourceTree = "<group>"; };
 		1BD9C75B2004182900022C8B /* SAKDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAKDefaults.swift; sourceTree = "<group>"; };
@@ -69,9 +72,9 @@
 		1BF4B193200303AF00376A8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BF4B19F2003148000376A8D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1BF8EC382097B96300856028 /* ArtistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewController.swift; sourceTree = "<group>"; };
-		2D705EC27CADBB806343D74C /* Pods-ArtPortfolio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtPortfolio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArtPortfolio/Pods-ArtPortfolio.debug.xcconfig"; sourceTree = "<group>"; };
-		4EBCB77AE3AD5CB564F3854A /* Pods-ArtPortfolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtPortfolio.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArtPortfolio/Pods-ArtPortfolio.release.xcconfig"; sourceTree = "<group>"; };
-		5F112DF565C626360A700D48 /* Pods_ArtPortfolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtPortfolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8669C831C043E4A47CBBC6B0 /* Pods-ArtPortfolio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtPortfolio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArtPortfolio/Pods-ArtPortfolio.debug.xcconfig"; sourceTree = "<group>"; };
+		A2F5402F38A3420AD0E06AEB /* Pods_ArtPortfolio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtPortfolio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8F8925E4AD92E7E242DD016 /* Pods-ArtPortfolio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtPortfolio.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArtPortfolio/Pods-ArtPortfolio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				509DE1D217B14B6CBFA3C861 /* Pods_ArtPortfolio.framework in Frameworks */,
+				A323AD159C81DBC1F8034689 /* Pods_ArtPortfolio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E40100900402F715EF14E10 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2F5402F38A3420AD0E06AEB /* Pods_ArtPortfolio.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1BD9C75A2004173400022C8B /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -116,9 +127,9 @@
 				1BF4B179200303AF00376A8D /* ArtPortfolio */,
 				1BF4B190200303AF00376A8D /* ArtPortfolioTests */,
 				1BF4B178200303AF00376A8D /* Products */,
-				AC8564F3A81CAB2302D335B1 /* Pods */,
-				3740934E278C003C35DBF32E /* Frameworks */,
 				1BF4B19F2003148000376A8D /* Podfile */,
+				6A989EEAF9C2761999D69029 /* Pods */,
+				0E40100900402F715EF14E10 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +152,7 @@
 				1BF4B19D2003046000376A8D /* ViewControllers */,
 				1BF4B19E2003048300376A8D /* Utility */,
 				1BF4B188200303AF00376A8D /* Info.plist */,
+				1B939E3B20C04E8600EC5715 /* GoogleService-Info.plist */,
 			);
 			path = ArtPortfolio;
 			sourceTree = "<group>";
@@ -213,19 +225,11 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		3740934E278C003C35DBF32E /* Frameworks */ = {
+		6A989EEAF9C2761999D69029 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5F112DF565C626360A700D48 /* Pods_ArtPortfolio.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		AC8564F3A81CAB2302D335B1 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2D705EC27CADBB806343D74C /* Pods-ArtPortfolio.debug.xcconfig */,
-				4EBCB77AE3AD5CB564F3854A /* Pods-ArtPortfolio.release.xcconfig */,
+				8669C831C043E4A47CBBC6B0 /* Pods-ArtPortfolio.debug.xcconfig */,
+				B8F8925E4AD92E7E242DD016 /* Pods-ArtPortfolio.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -237,11 +241,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1BF4B196200303B000376A8D /* Build configuration list for PBXNativeTarget "ArtPortfolio" */;
 			buildPhases = (
-				32DC29F54762B2692B4B96B2 /* [CP] Check Pods Manifest.lock */,
+				BACFBFC7636B8D4B661485AC /* [CP] Check Pods Manifest.lock */,
 				1BF4B173200303AF00376A8D /* Sources */,
 				1BF4B174200303AF00376A8D /* Frameworks */,
 				1BF4B175200303AF00376A8D /* Resources */,
-				F7BE0163AE1D448C8323532D /* [CP] Embed Pods Frameworks */,
+				A1D6FCBF2865F403BC0F70FF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -317,6 +321,7 @@
 			files = (
 				1BF4B187200303AF00376A8D /* LaunchScreen.storyboard in Resources */,
 				1BF4B184200303AF00376A8D /* Assets.xcassets in Resources */,
+				1B939E3C20C04E8600EC5715 /* GoogleService-Info.plist in Resources */,
 				1BF4B1A02003148000376A8D /* Podfile in Resources */,
 				1BF4B182200303AF00376A8D /* Main.storyboard in Resources */,
 			);
@@ -326,13 +331,42 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B939E3D20C04E8F00EC5715 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		32DC29F54762B2692B4B96B2 /* [CP] Check Pods Manifest.lock */ = {
+		A1D6FCBF2865F403BC0F70FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ArtPortfolio/Pods-ArtPortfolio-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/HexColors/HexColors.framework",
+				"${BUILT_PRODUCTS_DIR}/ScalingCarousel/ScalingCarousel.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HexColors.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScalingCarousel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArtPortfolio/Pods-ArtPortfolio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BACFBFC7636B8D4B661485AC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -348,28 +382,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F7BE0163AE1D448C8323532D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ArtPortfolio/Pods-ArtPortfolio-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/HexColors/HexColors.framework",
-				"${BUILT_PRODUCTS_DIR}/ScalingCarousel/ScalingCarousel.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HexColors.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScalingCarousel.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArtPortfolio/Pods-ArtPortfolio-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -554,7 +566,7 @@
 		};
 		1BF4B197200303B000376A8D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D705EC27CADBB806343D74C /* Pods-ArtPortfolio.debug.xcconfig */;
+			baseConfigurationReference = 8669C831C043E4A47CBBC6B0 /* Pods-ArtPortfolio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -562,7 +574,7 @@
 				DEVELOPMENT_TEAM = 3HDZQ5XYMF;
 				INFOPLIST_FILE = ArtPortfolio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = skern.ArtPortfolio;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skern.artportfolio;
 				PRODUCT_NAME = "V Portfolio";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -573,7 +585,7 @@
 		};
 		1BF4B198200303B000376A8D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4EBCB77AE3AD5CB564F3854A /* Pods-ArtPortfolio.release.xcconfig */;
+			baseConfigurationReference = B8F8925E4AD92E7E242DD016 /* Pods-ArtPortfolio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -581,7 +593,7 @@
 				DEVELOPMENT_TEAM = 3HDZQ5XYMF;
 				INFOPLIST_FILE = ArtPortfolio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = skern.ArtPortfolio;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skern.artportfolio;
 				PRODUCT_NAME = "V Portfolio";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;

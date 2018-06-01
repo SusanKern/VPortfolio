@@ -7,16 +7,17 @@
 //
 
 import Foundation
+import Firebase
 
 final class DataController {
     
     // MARK: Public variables
     
-    let artist = Artist(firstName: "V", 
-                        lastName: " ", 
-                        email: "v@artist.com", 
-                        imageNames: ["VImage0", "VImage1", "VImage2"],
-                        bio: "V is an award-winning artist, poet and actress (shown here in the lead role in 'Hello Dolly').  She loves being creative, and doesn't really love math.\n\nHer favorite activity is to sit and draw. She also loves volleyball and soccer.\n\n V attends the Design School at North Carolina State University.")
+    var artist = Artist(firstName: "~ Unknown", 
+                        lastName: "Artist ~", 
+                        email: " ", 
+                        imageNames: ["artistPlaceholder"],
+                        bio: " ")
 
     let portfolioContent = [
         PortfolioEntry(title: "NY Apartments", 
@@ -131,6 +132,42 @@ final class DataController {
                        size: "some size", 
                        awards: nil),
         ]
+    
+    init() {
+        /*
+        self.artist = Artist(firstName: "V", 
+                        lastName: " ", 
+                        email: "v@artist.com", 
+                        imageNames: ["VImage0", "VImage1", "VImage2"],
+                        bio: "V is an award-winning artist, poet and actress (shown here in the lead role in 'Hello Dolly').  She loves being creative, and doesn't really love math.\n\nHer favorite activity is to sit and draw. She also loves volleyball and soccer.\n\n V attends the Design School at North Carolina State University.")
+         */
+        
+        // Connect to Firebase
+        FirebaseApp.configure()
+        
+        var databaseReference: DatabaseReference!
+        databaseReference = Database.database().reference()
+
+        databaseReference.child("artist").observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            
+            let firstName = value?["firstName"] as? String ?? " "
+            let lastName = value?["lastName"] as? String ?? " "
+            let email = value?["email"] as? String ?? " "
+            let imageDictionary = value?["imageNames"] as? Dictionary<String, Bool> ?? ["placeholder": true]
+            let imageNamesArray = [String](imageDictionary.keys).sorted(by: <)  // Store images in alphabetical order
+
+            self.artist = Artist(firstName: firstName, 
+                                 lastName: lastName, 
+                                 email: email, 
+                                 imageNames: imageNamesArray,
+                                 bio: value?["bio"] as? String ?? " ")
+            log.info("Found Artist. Name: \(firstName) \(lastName), email: \(email), images: \(imageNamesArray)")
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+    }
 }
      
     
