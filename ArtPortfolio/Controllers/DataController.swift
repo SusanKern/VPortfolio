@@ -24,7 +24,7 @@ final class DataController {
                        description: "'NY Apartments' started out as a picture taken of buildings while walking through New York City. There is so much beauty around us, even along dirty, city streets. By painting this picture, I hoped to be able to reveal the beauty within a familiar sight that people often pass by without appreciating. The process of making this piece was intimidating at first because I had never used oil paint prior to this project, but I was able to learn new techniques as I painted. The medium enabled me to achieve vibrant colors through the process of layering shades of paint. The end result was a bright, cohesive piece full of life and color.", 
                        dateCreated: Date(), 
                        materials: "Oil paint on canvas", 
-                       size: "some size", 
+                       size: "18” x 24”", 
                        awards: nil),
         
         PortfolioEntry(title: "Lightbulb", 
@@ -32,7 +32,7 @@ final class DataController {
                        description: "'Lightbulb' was a challenge because of the minute details in both the lightbulb itself and the candelabra inside of it. The silver of the candelabra presented the greatest challenge due to the unusual highlights and shadows. To create this piece, I started by popping in the basic outline and shapes using a simple, graphite pencil. Then I began adding color and shadows. For the bright highlights on the base of the bulb, the silver of the candelabra, and the glass top, I used a thin paintbrush and white acrylic paint. The background of the piece was created by rubbing multiple colors of chalk dust onto the paper.", 
                        dateCreated: Date(), 
                        materials: "Mixed media", 
-                       size: "some size", 
+                       size: "14” x 20”", 
                        awards: "Scholastic Art & Writing Awards: American Visions Medal, Gold Medal\nOn national tour 2018-19"),
         
         PortfolioEntry(title: "Imagination", 
@@ -48,7 +48,7 @@ final class DataController {
                        description: "My goal in creating 'Silverware' was to present silverware in a way that was both realistic and creative. To accomplish this goal, I painted the silverware itself just as it appeared in real life, but I did so on a piece of distressed cardboard and used dripping paint to add interest. The cardboard was not distressed before I began, so I took an xacto knife and cut away the surface in some areas to reveal the texture underneath.", 
                        dateCreated: Date(), 
                        materials: "Gesso and Acrylic on cardboard", 
-                       size: "some size", 
+                       size: "32” x 40”", 
                        awards: nil),
         
         PortfolioEntry(title: "Water", 
@@ -72,7 +72,7 @@ final class DataController {
                        description: "The goal I hoped to accomplish with 'Candy' was to capture the vibrant colors of the different types of candy. Some candies were slightly transparent, so to show their coloring accurately in my drawing, I layered and blended several similar shades. For the brightest highlights on the plastic wrappers, I used white gesso. The wrappers were tricky because they did not have any real color, but cool shades of blue and purple helped show the outlines. ", 
                        dateCreated: Date(), 
                        materials: "Colored pencil", 
-                       size: "some size", 
+                       size: "17” x 11”", 
                        awards: nil),
         
         PortfolioEntry(title: "Reflection", 
@@ -88,7 +88,7 @@ final class DataController {
                        description: "'Natural Amphora' was inspired by the Neck Amphora, an ancient vase on display in the NC Museum of Art.  The curvature of this vase resembled the shape of a woman, so my goal in painting my piece was to capture the similarities between the female figure and a traditional amphora, all in a modern style. The pose of the subject and the high contrast of the black and white lend themselves more to the modern artistic style, while the patterns on the subject’s neck and torso come straight from ancient times. To create Natural Amphora, I started by penciling in the basic shapes on a piece of wood, and then I used black and white acrylic paint to bring depth to the piece.", 
                        dateCreated: Date(), 
                        materials: "Acrylic on wood", 
-                       size: "some size", 
+                       size: "23” x 31”", 
                        awards: "Selected by Teens Inspired competition for display at NC Museum of Art, Summer 2017\nOn semi-permanent public art display at North Hills, Raleigh, NC\nTrinity Academy Art Competition - Best in Show - 2017"),
         
         PortfolioEntry(title: "Picking Flowers", 
@@ -117,10 +117,10 @@ final class DataController {
         
         PortfolioEntry(title: "Window", 
                        imageName: "Window", 
-                       description: "Blah.", 
+                       description: "description of window", 
                        dateCreated: Date(), 
                        materials: "Resin, Acrylic", 
-                       size: "some size", 
+                       size: "24” x 24”", 
                        awards: nil),
         
         PortfolioEntry(title: "Florida views", 
@@ -128,7 +128,7 @@ final class DataController {
                        description: "Melbourne", 
                        dateCreated: Date(), 
                        materials: "Spraypaint, cardboard", 
-                       size: "some size", 
+                       size: "30” x 41”", 
                        awards: nil),
         ]
 }
