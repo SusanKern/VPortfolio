@@ -25,14 +25,19 @@ class PortfolioViewController: UIViewController  {
     
     // MARK: ViewController life cycle
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         _items = DataController.sharedInstance.portfolioContent
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        guard _items.count > 0 else { 
+            log.error("No items to display")
+            return
+        }
         
         if (_firstPass) {
             // Start in the middle of the super-large list of images, so scrolling will be "infinite" in either direction
