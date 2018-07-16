@@ -21,6 +21,7 @@ class PortfolioViewController: UIViewController  {
     private var _items = [PortfolioEntry]()
     private let _superSizeForRolloverScrolling = 10000000
     private var _firstPass = true
+    private var _timer = Timer()
 
     
     // MARK: ViewController life cycle
@@ -35,7 +36,7 @@ class PortfolioViewController: UIViewController  {
         super.viewDidAppear(animated)
         
         guard _items.count > 0 else { 
-            log.error("No items to display")
+            _timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(refreshContent), userInfo: nil, repeats: true)
             return
         }
         
@@ -44,6 +45,15 @@ class PortfolioViewController: UIViewController  {
             let midIndexPath = IndexPath(row: _items.count * 100, section: 0)
             collectionView.scrollToItem(at: midIndexPath, at: .left, animated: false)
             _firstPass = false
+        }
+    }
+    
+    @objc func refreshContent() {
+        _items = DataController.sharedInstance.portfolioContent
+        if _items.count > 0 {
+            _timer.invalidate()
+            
+            collectionView.reloadData()
         }
     }
 }
@@ -58,6 +68,8 @@ extension PortfolioViewController: UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        guard _items.count > 0 else { return 0 }
+
         // Set up super large list of images, to allow scrolling to roll over and be "infinite" in either direction
         return _superSizeForRolloverScrolling
     }
