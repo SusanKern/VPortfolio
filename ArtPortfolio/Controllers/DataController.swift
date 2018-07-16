@@ -19,6 +19,7 @@ final class DataController {
                         bio: "V is an award-winning artist, poet and actress (shown here in the lead role in 'Hello Dolly').  She loves being creative, and doesn't really love math.\n\nHer favorite activity is to sit and draw. She also loves volleyball and soccer.\n\n V attends the Design School at North Carolina State University.")
 
     let portfolioContent = [
+        
         PortfolioEntry(title: "NY Apartments", 
                        imageName: "NYApartments", 
                        description: "'NY Apartments' started out as a picture taken of buildings while walking through New York City. There is so much beauty around us, even along dirty, city streets. By painting this picture, I hoped to be able to reveal the beauty within a familiar sight that people often pass by without appreciating. The process of making this piece was intimidating at first because I had never used oil paint prior to this project, but I was able to learn new techniques as I painted. The medium enabled me to achieve vibrant colors through the process of layering shades of paint. The end result was a bright, cohesive piece full of life and color.", 
@@ -132,5 +133,3 @@ final class DataController {
                        awards: nil),
         ]
 }
-     
-    

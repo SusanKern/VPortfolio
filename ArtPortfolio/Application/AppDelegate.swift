@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
@@ -31,6 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         
         // Increment launch count
         SAKDefaults.incrementLaunchCount()
+        
+        // Setup Fabric
+        Fabric.with([Crashlytics.self])
         
         // Appearance
         self.customizeAppearance(application)

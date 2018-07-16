@@ -47,16 +47,16 @@ class ArtworkInfoViewController: UIViewController {
 
         descriptionTextView.textContainerInset = UIEdgeInsets(top: 6, left: 10, bottom: 6, right: 10);
         
+        if let artwork = artwork, let title = artwork.title {
+            log.info("Present Artwork Info screen for \(title)")
+        }
+        
         updateUI()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        if let artwork = artwork {
-            log.info("Present Artwork Info screen for \(artwork.title)")
-        }
-        
+
         descriptionTextView.flashScrollIndicators()
     }
     
@@ -113,6 +113,8 @@ class ArtworkInfoViewController: UIViewController {
     // MARK: Navigation
 
     @objc func tappedView() {
+        SAKAnalytics.logContentView(name: artwork!.title, fullScreen: true)
+
         performSegue(withIdentifier: "ArtworkFullScreenSegue", sender: self)
     }
     

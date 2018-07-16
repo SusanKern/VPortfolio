@@ -5,5 +5,7 @@ target 'ArtPortfolio' do
     pod 'SwiftyBeaver'
     pod 'HexColors'
     pod 'ScalingCarousel'
+    pod 'Fabric'
+    pod 'Crashlytics'
 end
 

@@ -8,6 +8,8 @@
 
 import UIKit
 import ScalingCarousel
+import Crashlytics
+
 
 class PortfolioViewController: UIViewController  {
 
@@ -50,6 +52,7 @@ class PortfolioViewController: UIViewController  {
     
     @objc func refreshContent() {
         _items = DataController.sharedInstance.portfolioContent
+
         if _items.count > 0 {
             _timer.invalidate()
             
@@ -84,6 +87,8 @@ extension PortfolioViewController: UICollectionViewDataSource, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let entry = _items[((indexPath as NSIndexPath).row) % _items.count]
+        
+        SAKAnalytics.logContentView(name: entry.title, fullScreen: false)
         
         let viewController : ArtworkInfoViewController = storyboard!.instantiateViewController(withIdentifier: "ArtworkInfoViewController") as! ArtworkInfoViewController
         viewController.artwork = entry
