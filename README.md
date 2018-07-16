@@ -15,5 +15,6 @@ An app to display the artistic talents of V.
 -  Use of CollectionView (based on CocoaPod) to provide swipeable interface of art entries
 -  UIKit, Storyboard-based interface
 -  Image pinch and zoom
+-  Crashlytics/Fabric for crash reporting and analytics
 -  High polish level of finished code
 -  UI/UX design
