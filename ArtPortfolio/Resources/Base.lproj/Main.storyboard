@@ -42,13 +42,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GJu-6X-nqC">
-                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                                                    <rect key="frame" x="0.0" y="2" width="200" height="298"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i32-yg-irG">
-                                                            <rect key="frame" x="0.0" y="0.0" width="200" height="244"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i32-yg-irG">
+                                                            <rect key="frame" x="0.0" y="6" width="200" height="236"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5T-Z1-83i">
-                                                            <rect key="frame" x="8" y="252" width="184" height="36"/>
+                                                            <rect key="frame" x="8" y="250" width="184" height="36"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="36" id="viW-4U-Fgj"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="22"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -61,7 +64,7 @@
                                                         <constraint firstItem="D5T-Z1-83i" firstAttribute="top" secondItem="i32-yg-irG" secondAttribute="bottom" constant="8" id="9EF-nS-nL2"/>
                                                         <constraint firstAttribute="trailing" secondItem="i32-yg-irG" secondAttribute="trailing" id="Xs2-yj-6Sl"/>
                                                         <constraint firstAttribute="trailing" secondItem="D5T-Z1-83i" secondAttribute="trailing" constant="8" id="fpF-28-ONr"/>
-                                                        <constraint firstItem="i32-yg-irG" firstAttribute="top" secondItem="GJu-6X-nqC" secondAttribute="top" id="oyp-eG-UMv"/>
+                                                        <constraint firstItem="i32-yg-irG" firstAttribute="top" secondItem="GJu-6X-nqC" secondAttribute="top" constant="6" id="oyp-eG-UMv"/>
                                                         <constraint firstItem="D5T-Z1-83i" firstAttribute="leading" secondItem="GJu-6X-nqC" secondAttribute="leading" constant="8" id="uQL-68-XXL"/>
                                                     </constraints>
                                                 </view>
@@ -72,7 +75,7 @@
                                             <constraint firstAttribute="trailing" secondItem="GJu-6X-nqC" secondAttribute="trailing" id="6yN-Td-qzq"/>
                                             <constraint firstItem="GJu-6X-nqC" firstAttribute="leading" secondItem="ZkO-Uc-lBZ" secondAttribute="leading" id="h4G-zB-aSM"/>
                                             <constraint firstAttribute="bottom" secondItem="GJu-6X-nqC" secondAttribute="bottom" id="pfw-tr-e0f"/>
-                                            <constraint firstItem="GJu-6X-nqC" firstAttribute="top" secondItem="ZkO-Uc-lBZ" secondAttribute="top" id="vLc-ht-kZP"/>
+                                            <constraint firstItem="GJu-6X-nqC" firstAttribute="top" secondItem="ZkO-Uc-lBZ" secondAttribute="top" constant="2" id="vLc-ht-kZP"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="i32-yg-irG" id="yYw-ES-lxq"/>
@@ -433,7 +436,7 @@
                                     <constraint firstItem="sXx-E4-vKP" firstAttribute="leading" secondItem="0A8-3m-JEB" secondAttribute="leading" constant="1" id="bqX-kY-SEP"/>
                                 </constraints>
                             </view>
-                            <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kqF-AH-pgf">
+                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kqF-AH-pgf">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="546.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
