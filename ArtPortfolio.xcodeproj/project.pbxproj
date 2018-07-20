@@ -11,6 +11,7 @@
 		1B65F1E12006FFBD00F63446 /* PortfolioEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B65F1E02006FFBD00F63446 /* PortfolioEntry.swift */; };
 		1B65F1E32007013200F63446 /* PortfolioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B65F1E22007013200F63446 /* PortfolioCollectionViewCell.swift */; };
 		1B80C65020FCF59A00C93888 /* SAKAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B80C64F20FCF59A00C93888 /* SAKAnalytics.swift */; };
+		1B80C65220FF8A6100C93888 /* SAKSocialLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B80C65120FF8A6100C93888 /* SAKSocialLinks.swift */; };
 		1B939E0820ACA5B800EC5715 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9C76620041B8C00022C8B /* DataController.swift */; };
 		1B939E0920ACA5BC00EC5715 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B20D117205353C90042960F /* Artist.swift */; };
 		1B939E0A20ACA5C000EC5715 /* PortfolioEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B65F1E02006FFBD00F63446 /* PortfolioEntry.swift */; };
@@ -50,6 +51,7 @@
 		1B65F1E02006FFBD00F63446 /* PortfolioEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioEntry.swift; sourceTree = "<group>"; };
 		1B65F1E22007013200F63446 /* PortfolioCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCollectionViewCell.swift; sourceTree = "<group>"; };
 		1B80C64F20FCF59A00C93888 /* SAKAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAKAnalytics.swift; sourceTree = "<group>"; };
+		1B80C65120FF8A6100C93888 /* SAKSocialLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAKSocialLinks.swift; sourceTree = "<group>"; };
 		1B97CB5B20A6042700FA3893 /* ArtworkFullScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkFullScreenViewController.swift; sourceTree = "<group>"; };
 		1B97CB5D20AB522200FA3893 /* SAKImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SAKImageView.swift; sourceTree = "<group>"; };
 		1BD9C75B2004182900022C8B /* SAKDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SAKDefaults.swift; sourceTree = "<group>"; };
@@ -199,10 +201,11 @@
 		1BF4B1AC2003E18200376A8D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1BD9C75B2004182900022C8B /* SAKDefaults.swift */,
-				1BD9C75C2004182900022C8B /* SAKLogging.swift */,
-				1B97CB5D20AB522200FA3893 /* SAKImageView.swift */,
 				1B80C64F20FCF59A00C93888 /* SAKAnalytics.swift */,
+				1BD9C75B2004182900022C8B /* SAKDefaults.swift */,
+				1B97CB5D20AB522200FA3893 /* SAKImageView.swift */,
+				1BD9C75C2004182900022C8B /* SAKLogging.swift */,
+				1B80C65120FF8A6100C93888 /* SAKSocialLinks.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				1BD9C75D2004182900022C8B /* SAKDefaults.swift in Sources */,
 				1BF8EC392097B96300856028 /* ArtistViewController.swift in Sources */,
 				1B97CB5C20A6042700FA3893 /* ArtworkFullScreenViewController.swift in Sources */,
+				1B80C65220FF8A6100C93888 /* SAKSocialLinks.swift in Sources */,
 				1BE3A6C820A32FE700BBAA24 /* ArtworkInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,7 +513,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -563,7 +567,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -579,10 +583,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 3HDZQ5XYMF;
+				DEVELOPMENT_TEAM = QZK74L4Q7L;
 				INFOPLIST_FILE = ArtPortfolio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = skern.ArtPortfolio;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skern.artportfolio;
 				PRODUCT_NAME = "V Portfolio";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -598,10 +602,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3HDZQ5XYMF;
+				DEVELOPMENT_TEAM = QZK74L4Q7L;
 				INFOPLIST_FILE = ArtPortfolio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = skern.ArtPortfolio;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skern.artportfolio;
 				PRODUCT_NAME = "V Portfolio";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;

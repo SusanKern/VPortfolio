@@ -15,8 +15,9 @@ final class DataController {
     let artist = Artist(firstName: "V", 
                         lastName: " ", 
                         email: "v@artist.com", 
+                        instagramUsername: "vik_kern_art",
                         imageNames: ["VImage0", "VImage1", "VImage2"],
-                        bio: "V is an award-winning artist, poet and actress (shown here in the lead role in 'Hello Dolly').  She loves being creative, and doesn't really love math.\n\nHer favorite activity is to sit and draw. She also loves volleyball and soccer.\n\n V attends the Design School at North Carolina State University.")
+                        bio: "V is an award-winning artist, poet and actress (shown here in the lead role in 'Hello Dolly').  She loves being creative, and doesn't really love math.\nHer favorite activity is to sit and draw. She also loves volleyball and soccer.\nV attends the Design School at North Carolina State University.")
 
     let portfolioContent = [
         
