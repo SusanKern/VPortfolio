@@ -12,7 +12,7 @@ struct PortfolioEntry {
     let title: String!
     let imageName: String!
     let description: String?
-    let dateCreated: Date?
+    let dateCreated: String?
     let materials: String?
     let size: String?
     let awards: String?
