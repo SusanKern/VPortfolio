@@ -14,7 +14,7 @@ final class DataController {
     
     let artist = Artist(firstName: "V", 
                         lastName: " ", 
-                        email: "v@artist.com", 
+                        email: "vikkernart@gmail.com", 
                         instagramUsername: "vik_kern_art",
                         imageNames: ["VImage0", "VImage1", "VImage2"],
                         bio: "V is an award-winning artist, poet and actress (shown here in the lead role in 'Hello Dolly'). Creating beauty from the ordinary is her passion, as evident in the subjects she chooses for her art.\nIn addition to being creative, she loves interacting with and helping children, and she spends her summers doing that as a counselor at a children's camp.\nV attends the Design School at North Carolina State University.")
