@@ -600,7 +600,7 @@
 			baseConfigurationReference = 4EBCB77AE3AD5CB564F3854A /* Pods-ArtPortfolio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QZK74L4Q7L;
 				INFOPLIST_FILE = ArtPortfolio/Info.plist;
