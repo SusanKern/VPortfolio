@@ -289,7 +289,7 @@
 				TargetAttributes = {
 					1BF4B176200303AF00376A8D = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					1BF4B18C200303AF00376A8D = {
 						CreatedOnToolsVersion = 9.2;
@@ -581,15 +581,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = QZK74L4Q7L;
 				INFOPLIST_FILE = ArtPortfolio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skern.artportfolio;
 				PRODUCT_NAME = "V Portfolio";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "83711854-0a7d-4bbc-887f-b6af16bac62e";
+				PROVISIONING_PROFILE_SPECIFIER = ArtPortfolioDevelopment;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -600,14 +600,15 @@
 			baseConfigurationReference = 4EBCB77AE3AD5CB564F3854A /* Pods-ArtPortfolio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = QZK74L4Q7L;
 				INFOPLIST_FILE = ArtPortfolio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skern.artportfolio;
 				PRODUCT_NAME = "V Portfolio";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "d59e1241-7a1a-44af-af81-8b98e4501b8a";
+				PROVISIONING_PROFILE_SPECIFIER = ArtPortfolioDistribution;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
