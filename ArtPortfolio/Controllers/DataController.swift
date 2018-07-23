@@ -58,7 +58,7 @@ final class DataController {
                        description: "'Ladder' was a challenge to create simply because of the incredible detail. It took months to complete because of both the complicated flowers and all the tiny spaces that needed to be shaded one at a time. My goal with this piece was to combine the hard structure of the chairs and ladder with the whimsical flower designs in order to make an every-day subject more interesting.", 
                        dateCreated: "Fall 2016", 
                        materials: "Colored pencil and ink", 
-                       size: "some size", 
+                       size: "~ 20” x 30”", 
                        awards: "On semi-permanent public art display at North Hills, Raleigh, NC"),
         
         PortfolioEntry(title: "Candy", 
@@ -74,7 +74,7 @@ final class DataController {
                        description: "'Reflection' was very different from any pieces I had previously created. The many shadows forced me to carefully consider the different shapes in a human face as I worked, since only certain features were illuminated. To make this piece, I first cut tape into the shapes of the cracks in the mirror, and I placed those on the paper. Then I drew in the face and hands before adding the black around them. Once the drawing itself was complete, I peeled off the tape, which had left clean, white lines behind. One difficulty I encountered while drawing this piece was the idea of having the picture make sense. There were a lot of interesting shapes and reflections, and if someone looking at the drawing could not tell there was a mirror, then the elements of the piece would not seem cohesive.", 
                        dateCreated: "Winter 2016", 
                        materials: "Charcoal", 
-                       size: "some size", 
+                       size: "24” x 36”", 
                        awards: "Trinity Academy Art Competition - Best in Show - 2016"),
         
         PortfolioEntry(title: "Natural Amphora", 
@@ -90,7 +90,7 @@ final class DataController {
                        description: "This piece taught me the skill of layering colors to create depth, both in skin-tones and in shadows. At first, I was hesitant to use any blues or purples in the skin areas, but as I worked, I became more comfortable with adding opposite colors in order to make some sections darker than others. I also noticed many slight variations in the coloring of the model’s skin as I studied the photograph I was drawing. Even just on her face, some areas had red undertones, while others had hints of olive. Through the process of making this specific piece, I learned a lot about color and how it can be utilized in subtle ways.", 
                        dateCreated: "Fall 2017", 
                        materials: "Chalk pastel", 
-                       size: "some size", 
+                       size: "~ 18” x 24”", 
                        awards: "Trinity Academy Art Competition - 1st place - High School Division - 2018"),
         
         PortfolioEntry(title: "Legs", 
@@ -98,7 +98,7 @@ final class DataController {
                        description: "Legs is a piece that focuses on the shapes of the human body. The style of hatching used in the painting serves to draw extra attention to the shadows, creating depth in the picture. To begin this piece, I drew the basic shapes with pencil, then proceeded to fill in different values using black sharpie. Once the shading was complete, I popped in some color on the fabrics and the floor to brighten the piece.", 
                        dateCreated: "Fall 2015", 
                        materials: "Watercolor and ink", 
-                       size: "some size", 
+                       size: "18” x 24”", 
                        awards: "NC State Fair - Special Award - 2015\nOn semi-permanent public art display at North Hills, Raleigh, NC"),
         
         PortfolioEntry(title: "Treefrog", 
