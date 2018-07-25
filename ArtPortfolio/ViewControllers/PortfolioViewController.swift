@@ -48,6 +48,11 @@ class PortfolioViewController: UIViewController  {
             collectionView.scrollToItem(at: midIndexPath, at: .left, animated: false)
             _firstPass = false
         }
+        
+        // Capture when user swipes up on screen
+        let swipeRecognizer = UISwipeGestureRecognizer.init(target: self, action: #selector(swipedUpView))
+        swipeRecognizer.direction = .up
+        view.addGestureRecognizer(swipeRecognizer)
     }
     
     @objc func refreshContent() {
@@ -58,6 +63,37 @@ class PortfolioViewController: UIViewController  {
             
             collectionView.reloadData()
         }
+    }
+
+    
+    // MARK: Navigation
+    
+    @objc func swipedUpView() {
+        if let indexPath = getCurrentIndexPath() {
+            openDetailView(indexPath: indexPath)
+        }
+    }
+    
+    
+    // MARK: Private functions
+    
+    private func getCurrentIndexPath() -> IndexPath? {
+        var visibleRect = CGRect()
+        visibleRect.origin = collectionView.contentOffset
+        visibleRect.size = collectionView.bounds.size
+        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
+        
+        return collectionView.indexPathForItem(at: visiblePoint)
+    }
+    
+    private func openDetailView(indexPath: IndexPath) {
+        let entry = _items[((indexPath as NSIndexPath).row) % _items.count]
+        
+        SAKAnalytics.logContentView(name: entry.title, fullScreen: false)
+        
+        let viewController : ArtworkInfoViewController = storyboard!.instantiateViewController(withIdentifier: "ArtworkInfoViewController") as! ArtworkInfoViewController
+        viewController.artwork = entry
+        present(viewController, animated: true, completion: nil)
     }
 }
 
@@ -86,13 +122,7 @@ extension PortfolioViewController: UICollectionViewDataSource, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let entry = _items[((indexPath as NSIndexPath).row) % _items.count]
-        
-        SAKAnalytics.logContentView(name: entry.title, fullScreen: false)
-        
-        let viewController : ArtworkInfoViewController = storyboard!.instantiateViewController(withIdentifier: "ArtworkInfoViewController") as! ArtworkInfoViewController
-        viewController.artwork = entry
-        navigationController?.pushViewController(viewController, animated: true)
+        openDetailView(indexPath: indexPath)
     }
 }
     

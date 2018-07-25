@@ -27,6 +27,7 @@ class ArtworkInfoViewController: UIViewController {
     @IBOutlet weak var sizeButton: UIButton!
     @IBOutlet weak var materialsButton: UIButton!
     @IBOutlet weak var awardsButton: UIButton!
+    @IBOutlet weak var navItem: UINavigationItem!
     
     
     // MARK: ViewController life-cycle
@@ -49,6 +50,7 @@ class ArtworkInfoViewController: UIViewController {
         
         if let artwork = artwork, let title = artwork.title {
             log.info("Present Artwork Info screen for \(title)")
+            navItem.title = title
         }
         
         updateUI()
@@ -77,8 +79,8 @@ class ArtworkInfoViewController: UIViewController {
     
     // MARK: IBActions
     
-    @IBAction func tappedBackButton(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+    @IBAction func tappedDoneButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     
