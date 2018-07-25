@@ -39,8 +39,13 @@ class ArtworkInfoViewController: UIViewController {
         imageView.layer.borderWidth = 2
         
         // Capture when user taps on artwork image
-        let tapRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(tappedView))
+        let tapRecognizer = UITapGestureRecognizer.init(target: self, action: #selector(tappedImage))
         imageView.addGestureRecognizer(tapRecognizer)
+        
+        // Capture when user swipes down on screen
+        let swipeRecognizer = UISwipeGestureRecognizer.init(target: self, action: #selector(swipedDownView))
+        swipeRecognizer.direction = .down
+        view.addGestureRecognizer(swipeRecognizer)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -114,10 +119,14 @@ class ArtworkInfoViewController: UIViewController {
     
     // MARK: Navigation
 
-    @objc func tappedView() {
+    @objc func tappedImage() {
         SAKAnalytics.logContentView(name: artwork!.title, fullScreen: true)
 
         performSegue(withIdentifier: "ArtworkFullScreenSegue", sender: self)
+    }
+        
+    @objc func swipedDownView() {
+        dismiss(animated: true, completion: nil)
     }
     
     
