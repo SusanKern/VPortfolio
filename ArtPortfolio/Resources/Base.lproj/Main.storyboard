@@ -45,7 +45,7 @@
                                                     <rect key="frame" x="0.0" y="2" width="200" height="298"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i32-yg-irG">
-                                                            <rect key="frame" x="0.0" y="6" width="200" height="236"/>
+                                                            <rect key="frame" x="0.0" y="16" width="200" height="226"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5T-Z1-83i">
                                                             <rect key="frame" x="78.5" y="250" width="43.5" height="36"/>
@@ -57,19 +57,24 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowDown" translatesAutoresizingMaskIntoConstraints="NO" id="4PB-V8-fwL">
-                                                            <rect key="frame" x="174" y="276" width="16" height="16"/>
+                                                            <rect key="frame" x="178" y="280" width="12" height="12"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="16" id="GGH-bE-Y6y"/>
-                                                                <constraint firstAttribute="height" constant="16" id="IHH-qW-NJ1"/>
+                                                                <constraint firstAttribute="width" constant="12" id="GGH-bE-Y6y"/>
+                                                                <constraint firstAttribute="height" constant="12" id="IHH-qW-NJ1"/>
                                                             </constraints>
                                                         </imageView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowDown" translatesAutoresizingMaskIntoConstraints="NO" id="5vs-Fa-aWh">
-                                                            <rect key="frame" x="10" y="276" width="16" height="16"/>
+                                                            <rect key="frame" x="10" y="280" width="12" height="12"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="16" id="DOn-DZ-MFR"/>
-                                                                <constraint firstAttribute="height" constant="16" id="EMc-LD-hJ7"/>
-                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="16" id="mYX-Xi-6W1"/>
-                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="xdc-Q4-igF"/>
+                                                                <constraint firstAttribute="width" constant="12" id="DOn-DZ-MFR"/>
+                                                                <constraint firstAttribute="height" constant="12" id="EMc-LD-hJ7"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowDouble" translatesAutoresizingMaskIntoConstraints="NO" id="B0t-vL-5HI">
+                                                            <rect key="frame" x="164" y="3" width="36" height="10"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="36" id="dTI-bH-gf4"/>
+                                                                <constraint firstAttribute="height" constant="10" id="gfU-Uc-WJg"/>
                                                             </constraints>
                                                         </imageView>
                                                     </subviews>
@@ -78,12 +83,14 @@
                                                         <constraint firstAttribute="bottom" secondItem="D5T-Z1-83i" secondAttribute="bottom" constant="12" id="1Jw-HQ-IRo"/>
                                                         <constraint firstItem="i32-yg-irG" firstAttribute="leading" secondItem="GJu-6X-nqC" secondAttribute="leading" id="4hf-Ft-MAX"/>
                                                         <constraint firstItem="D5T-Z1-83i" firstAttribute="top" secondItem="i32-yg-irG" secondAttribute="bottom" constant="8" id="9EF-nS-nL2"/>
+                                                        <constraint firstItem="i32-yg-irG" firstAttribute="top" secondItem="B0t-vL-5HI" secondAttribute="bottom" constant="3" id="L5N-NB-5Jx"/>
                                                         <constraint firstAttribute="bottom" secondItem="4PB-V8-fwL" secondAttribute="bottom" constant="6" id="WuU-Mo-XgD"/>
                                                         <constraint firstAttribute="trailing" secondItem="i32-yg-irG" secondAttribute="trailing" id="Xs2-yj-6Sl"/>
                                                         <constraint firstAttribute="trailing" secondItem="4PB-V8-fwL" secondAttribute="trailing" constant="10" id="auN-YR-ZE4"/>
+                                                        <constraint firstItem="B0t-vL-5HI" firstAttribute="top" secondItem="GJu-6X-nqC" secondAttribute="top" constant="3" id="b7c-Cw-QUU"/>
+                                                        <constraint firstAttribute="trailing" secondItem="B0t-vL-5HI" secondAttribute="trailing" id="cR3-h2-Mao"/>
                                                         <constraint firstItem="5vs-Fa-aWh" firstAttribute="leading" secondItem="GJu-6X-nqC" secondAttribute="leading" constant="10" id="loX-HA-BeT"/>
                                                         <constraint firstAttribute="bottom" secondItem="5vs-Fa-aWh" secondAttribute="bottom" constant="6" id="nqh-TM-rzo"/>
-                                                        <constraint firstItem="i32-yg-irG" firstAttribute="top" secondItem="GJu-6X-nqC" secondAttribute="top" constant="6" id="oyp-eG-UMv"/>
                                                         <constraint firstItem="D5T-Z1-83i" firstAttribute="centerX" secondItem="GJu-6X-nqC" secondAttribute="centerX" id="sMt-hV-DzC"/>
                                                     </constraints>
                                                 </view>
@@ -557,6 +564,7 @@
     </scenes>
     <resources>
         <image name="FloralFurniture" width="2008" height="2830"/>
+        <image name="arrowDouble" width="466" height="198"/>
         <image name="arrowDown" width="30" height="30"/>
         <image name="arrowLeft" width="10" height="18"/>
         <image name="email" width="560" height="560"/>
