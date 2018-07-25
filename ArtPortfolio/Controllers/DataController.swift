@@ -17,18 +17,9 @@ final class DataController {
                         email: "vikkernart@gmail.com", 
                         instagramUsername: "vik_kern_art",
                         imageNames: ["VImage0", "VImage1", "VImage2"],
-                        bio: "V is an award-winning artist, poet and actress (shown here in the lead role in 'Hello Dolly'). Creating beauty from the ordinary is her passion, as evident in the subjects she chooses for her art.\nIn addition to being creative, she loves interacting with and helping children, and she spends her summers doing that as a counselor at a children's camp.\nV attends the Design School at North Carolina State University.")
+                        bio: "V is an award-winning artist, poet and actress (shown above in the lead role in 'Hello Dolly'). Creating beauty from the ordinary is her passion, as evident in the subjects she chooses for her art.\nIn addition to being creative, she loves interacting with and helping children, and she spends her summers doing that as a counselor at a children's camp.\nV attends the Design School at North Carolina State University.")
 
     let portfolioContent = [
-        
-        PortfolioEntry(title: "NY Apartments", 
-                       imageName: "NYApartments", 
-                       description: "'NY Apartments' started out as a picture taken of buildings while walking through New York City. There is so much beauty around us, even along dirty, city streets. By painting this picture, I hoped to be able to reveal the beauty within a familiar sight that people often pass by without appreciating. The process of making this piece was intimidating at first because I had never used oil paint prior to this project, but I was able to learn new techniques as I painted. The medium enabled me to achieve vibrant colors through the process of layering shades of paint. The end result was a bright, cohesive piece full of life and color.", 
-                       dateCreated: "Spring 2016", 
-                       materials: "Oil paint on canvas", 
-                       size: "18” x 24”", 
-                       awards: nil),
-        
         PortfolioEntry(title: "Lightbulb", 
                        imageName: "LightBulb", 
                        description: "'Lightbulb' was a challenge because of the minute details in both the lightbulb itself and the candelabra inside of it. The silver of the candelabra presented the greatest challenge due to the unusual highlights and shadows. To create this piece, I started by popping in the basic outline and shapes using a simple, graphite pencil. Then I began adding color and shadows. For the bright highlights on the base of the bulb, the silver of the candelabra, and the glass top, I used a thin paintbrush and white acrylic paint. The background of the piece was created by rubbing multiple colors of chalk dust onto the paper.", 
@@ -44,6 +35,23 @@ final class DataController {
                        materials: "Paper collage", 
                        size: "~ 24” x 36”", 
                        awards: nil),
+        
+        PortfolioEntry(title: "Natural Amphora", 
+                       imageName: "NaturalAmphora", 
+                       description: "'Natural Amphora' was inspired by the Neck Amphora, an ancient vase on display in the NC Museum of Art.  The curvature of this vase resembled the shape of a woman, so my goal in painting my piece was to capture the similarities between the female figure and a traditional amphora, all in a modern style. The pose of the subject and the high contrast of the black and white lend themselves more to the modern artistic style, while the patterns on the subject’s neck and torso come straight from ancient times. To create Natural Amphora, I started by penciling in the basic shapes on a piece of wood, and then I used black and white acrylic paint to bring depth to the piece.", 
+                       dateCreated: "Fall 2016", 
+                       materials: "Acrylic on wood", 
+                       size: "23” x 31”", 
+                       awards: "Selected by Teens Inspired competition for display at NC Museum of Art, Summer 2017\nOn semi-permanent public art display at North Hills, Raleigh, NC\nTrinity Academy Art Competition - Best in Show - 2017"),
+        
+        PortfolioEntry(title: "NY Apartments", 
+                       imageName: "NYApartments", 
+                       description: "'NY Apartments' started out as a picture taken of buildings while walking through New York City. There is so much beauty around us, even along dirty, city streets. By painting this picture, I hoped to be able to reveal the beauty within a familiar sight that people often pass by without appreciating. The process of making this piece was intimidating at first because I had never used oil paint prior to this project, but I was able to learn new techniques as I painted. The medium enabled me to achieve vibrant colors through the process of layering shades of paint. The end result was a bright, cohesive piece full of life and color.", 
+                       dateCreated: "Spring 2016", 
+                       materials: "Oil paint on canvas", 
+                       size: "18” x 24”", 
+                       awards: nil),
+
                             
         PortfolioEntry(title: "Silverware", 
                        imageName: "Silverware", 
@@ -76,14 +84,6 @@ final class DataController {
                        materials: "Charcoal", 
                        size: "24” x 36”", 
                        awards: "Trinity Academy Art Competition - Best in Show - 2016"),
-        
-        PortfolioEntry(title: "Natural Amphora", 
-                       imageName: "NaturalAmphora", 
-                       description: "'Natural Amphora' was inspired by the Neck Amphora, an ancient vase on display in the NC Museum of Art.  The curvature of this vase resembled the shape of a woman, so my goal in painting my piece was to capture the similarities between the female figure and a traditional amphora, all in a modern style. The pose of the subject and the high contrast of the black and white lend themselves more to the modern artistic style, while the patterns on the subject’s neck and torso come straight from ancient times. To create Natural Amphora, I started by penciling in the basic shapes on a piece of wood, and then I used black and white acrylic paint to bring depth to the piece.", 
-                       dateCreated: "Fall 2016", 
-                       materials: "Acrylic on wood", 
-                       size: "23” x 31”", 
-                       awards: "Selected by Teens Inspired competition for display at NC Museum of Art, Summer 2017\nOn semi-permanent public art display at North Hills, Raleigh, NC\nTrinity Academy Art Competition - Best in Show - 2017"),
         
         PortfolioEntry(title: "Picking Flowers", 
                        imageName: "PickingFlowers", 
