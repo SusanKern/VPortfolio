@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     
     // MARK: Application Lifecycle
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         SAKLogging.initialize()
         
@@ -74,13 +74,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         UINavigationBar.appearance().barTintColor = UIColor.globalTintColor()
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().isTranslucent = false
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white,
-                                                            NSAttributedStringKey.font : UIFont(name: "Noteworthy-Light", size: 20)!]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white,
+                                                            NSAttributedString.Key.font : UIFont(name: "Noteworthy-Light", size: 20)!]
         UINavigationBar.appearance().shadowImage = UIImage.imageWithColor(color: .lightGray)
                 
         UIBarButtonItem.appearance().setTitleTextAttributes( [
-            NSAttributedStringKey.foregroundColor : UIColor.white,
-            NSAttributedStringKey.font : UIFont(name: "Noteworthy-Bold", size: 20)!], for: UIControlState.normal)
+            NSAttributedString.Key.foregroundColor : UIColor.white,
+            NSAttributedString.Key.font : UIFont(name: "Noteworthy-Bold", size: 20)!], for: UIControl.State.normal)
     }
 }
 

@@ -12,7 +12,7 @@
 		1B65F1E32007013200F63446 /* PortfolioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B65F1E22007013200F63446 /* PortfolioCollectionViewCell.swift */; };
 		1B80C65020FCF59A00C93888 /* SAKAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B80C64F20FCF59A00C93888 /* SAKAnalytics.swift */; };
 		1B80C65220FF8A6100C93888 /* SAKSocialLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B80C65120FF8A6100C93888 /* SAKSocialLinks.swift */; };
-		1B87AF4C2452002D001F0216 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 1B87AF4B2452002D001F0216 /* SwiftPackageProductDependency */; };
+		1B87AF4C2452002D001F0216 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = 1B87AF4B2452002D001F0216 /* SwiftyBeaver */; };
 		1B939E0820ACA5B800EC5715 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9C76620041B8C00022C8B /* DataController.swift */; };
 		1B939E0920ACA5BC00EC5715 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B20D117205353C90042960F /* Artist.swift */; };
 		1B939E0A20ACA5C000EC5715 /* PortfolioEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B65F1E02006FFBD00F63446 /* PortfolioEntry.swift */; };
@@ -85,7 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				509DE1D217B14B6CBFA3C861 /* Pods_ArtPortfolio.framework in Frameworks */,
-				1B87AF4C2452002D001F0216 /* BuildFile in Frameworks */,
+				1B87AF4C2452002D001F0216 /* SwiftyBeaver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +258,7 @@
 			);
 			name = ArtPortfolio;
 			packageProductDependencies = (
-				1B87AF4B2452002D001F0216 /* SwiftPackageProductDependency */,
+				1B87AF4B2452002D001F0216 /* SwiftyBeaver */,
 			);
 			productName = ArtPortfolio;
 			productReference = 1BF4B177200303AF00376A8D /* V Portfolio.app */;
@@ -294,10 +294,12 @@
 				TargetAttributes = {
 					1BF4B176200303AF00376A8D = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1130;
 						ProvisioningStyle = Manual;
 					};
 					1BF4B18C200303AF00376A8D = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 1BF4B176200303AF00376A8D;
 					};
@@ -313,7 +315,7 @@
 			);
 			mainGroup = 1BF4B16E200303AF00376A8D;
 			packageReferences = (
-				1B87AF4A2452002D001F0216 /* RemoteSwiftPackageReference */,
+				1B87AF4A2452002D001F0216 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
 			);
 			productRefGroup = 1BF4B178200303AF00376A8D /* Products */;
 			projectDirPath = "";
@@ -597,7 +599,7 @@
 				PRODUCT_NAME = "V Portfolio";
 				PROVISIONING_PROFILE = "83711854-0a7d-4bbc-887f-b6af16bac62e";
 				PROVISIONING_PROFILE_SPECIFIER = ArtPortfolioDevelopment;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -619,7 +621,7 @@
 				PRODUCT_NAME = "V Portfolio";
 				PROVISIONING_PROFILE = "d59e1241-7a1a-44af-af81-8b98e4501b8a";
 				PROVISIONING_PROFILE_SPECIFIER = ArtPortfolioDistribution;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -639,7 +641,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = skern.ArtPortfolioTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/V Portfolio.app/V Portfolio";
 			};
@@ -660,7 +662,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = skern.ArtPortfolioTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/V Portfolio.app/V Portfolio";
 			};
@@ -699,7 +701,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1B87AF4A2452002D001F0216 /* RemoteSwiftPackageReference */ = {
+		1B87AF4A2452002D001F0216 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver.git";
 			requirement = {
@@ -710,9 +712,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1B87AF4B2452002D001F0216 /* SwiftPackageProductDependency */ = {
+		1B87AF4B2452002D001F0216 /* SwiftyBeaver */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1B87AF4A2452002D001F0216 /* RemoteSwiftPackageReference */;
+			package = 1B87AF4A2452002D001F0216 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
 			productName = SwiftyBeaver;
 		};
 /* End XCSwiftPackageProductDependency section */
