@@ -1,9 +1,7 @@
-platform :ios, '10.0'
+platform :ios, '12.0'
 use_frameworks!
 
 target 'ArtPortfolio' do
-    pod 'SwiftyBeaver'
-    pod 'HexColors'
     pod 'ScalingCarousel'
     pod 'Fabric'
     pod 'Crashlytics'

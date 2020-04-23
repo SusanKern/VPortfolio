@@ -6,25 +6,41 @@
 //
 
 import UIKit
-import HexColors
 
 extension UIColor {
     
-    static func app_globalTintColor() -> UIColor { return UIColor.black }
-    static func app_buttonColor() -> UIColor { return app_greenColor() }
-    static func app_buttonTextColor() -> UIColor { return UIColor.white }
+    static func globalTintColor() -> UIColor { return UIColor.black }
+    static func buttonColor() -> UIColor { return greenColor() }
+    static func buttonTextColor() -> UIColor { return UIColor.white }
     
-    static func app_lightGreenColor() -> UIColor { return UIColor("d2f7a5")! }
-    static func app_greenColor() -> UIColor { return UIColor("b0d325")! }
-    static func app_darkGreenColor() -> UIColor { return UIColor("263a0c")! }
-    static func app_redColor() -> UIColor { return UIColor("f56757")! }
-    static func app_darkRedColor() -> UIColor { return UIColor("d1554b")! }
-    static func app_yellowColor() -> UIColor { return UIColor("efb206")! }
-    static func app_lightGrayColor() -> UIColor { return UIColor("efeff4")! }
-    static func app_mediumGrayColor() -> UIColor { return UIColor("cccccc")! }
-    static func app_grayColor() -> UIColor { return UIColor("909090")! }
-    static func app_darkGrayColor() -> UIColor { return UIColor("808080")! }
-    static func app_mediumBlueColor() -> UIColor { return UIColor("5B5BC0")! }
-    static func app_darkBlueColor() -> UIColor { return UIColor("191970")! }
+    static func lightGreenColor() -> UIColor { return UIColor(hexString: "d2f7a5") }
+    static func greenColor() -> UIColor { return UIColor(hexString: "b0d325") }
+    
+    convenience init(hexString: String, alpha: CGFloat = 1.0) {
+        let hexString: String = hexString.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        let scanner = Scanner(string: hexString)
+        if (hexString.hasPrefix("#")) {
+            scanner.scanLocation = 1
+        }
+        var color: UInt32 = 0
+        scanner.scanHexInt32(&color)
+        let mask = 0x000000FF
+        let r = Int(color >> 16) & mask
+        let g = Int(color >> 8) & mask
+        let b = Int(color) & mask
+        let red   = CGFloat(r) / 255.0
+        let green = CGFloat(g) / 255.0
+        let blue  = CGFloat(b) / 255.0
+        self.init(red:red, green:green, blue:blue, alpha:alpha)
+    }
+    
+    func toHexString() -> String {
+        var r:CGFloat = 0
+        var g:CGFloat = 0
+        var b:CGFloat = 0
+        var a:CGFloat = 0
+        getRed(&r, green: &g, blue: &b, alpha: &a)
+        let rgb:Int = (Int)(r*255)<<16 | (Int)(g*255)<<8 | (Int)(b*255)<<0
+        return String(format:"#%06x", rgb)
+    }
 }
-

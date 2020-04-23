@@ -1,33 +1,25 @@
 PODS:
-  - Crashlytics (3.10.5):
-    - Fabric (~> 1.7.9)
-  - Fabric (1.7.9)
-  - HexColors (6.0.0)
-  - ScalingCarousel (2.2)
-  - SwiftyBeaver (1.5.2)
+  - Crashlytics (3.14.0):
+    - Fabric (~> 1.10.2)
+  - Fabric (1.10.2)
+  - ScalingCarousel (3.0)
 
 DEPENDENCIES:
   - Crashlytics
   - Fabric
-  - HexColors
   - ScalingCarousel
-  - SwiftyBeaver
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  trunk:
     - Crashlytics
     - Fabric
-    - HexColors
     - ScalingCarousel
-    - SwiftyBeaver
 
 SPEC CHECKSUMS:
-  Crashlytics: 7f2e38d302d9da96475b3d64d86fb29e31a542b7
-  Fabric: a2917d3895e4c1569b9c3170de7320ea1b1e6661
-  HexColors: f8c66339541a74bb08905bfe7cd4f8cc85e9e173
-  ScalingCarousel: 346af59372a3823a1a38d5bc02ac4fd16afa4fd7
-  SwiftyBeaver: 85daaaa2b3ae6e31b7b55c99430e8b91dac088af
+  Crashlytics: 540b7e5f5da5a042647227a5e3ac51d85eed06df
+  Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
+  ScalingCarousel: 7bf711d154b0c5c362c5dd4787ed7d13b489a4cb
 
-PODFILE CHECKSUM: 150ce35d9ba9cfbd782ca89d618acae89ce72604
+PODFILE CHECKSUM: e6f7c580f6a1bf782924520a68d5acecde1b8bdf
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.9.1

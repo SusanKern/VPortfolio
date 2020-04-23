@@ -68,18 +68,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     
     private func customizeAppearance(_ application: UIApplication) {
         // Global tint
-        self.window?.tintColor = UIColor.app_globalTintColor()
+        self.window?.tintColor = UIColor.globalTintColor()
         
         // Navigation bars
-        UINavigationBar.appearance().barTintColor = UIColor.app_globalTintColor()
+        UINavigationBar.appearance().barTintColor = UIColor.globalTintColor()
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().isTranslucent = false
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white,
                                                             NSAttributedStringKey.font : UIFont(name: "Noteworthy-Light", size: 20)!]
-        UINavigationBar.appearance().shadowImage = UIImage.imageWithColor(color: .app_lightGrayColor())
-        
-        UIApplication.shared.isStatusBarHidden = true
-        
+        UINavigationBar.appearance().shadowImage = UIImage.imageWithColor(color: .lightGray)
+                
         UIBarButtonItem.appearance().setTitleTextAttributes( [
             NSAttributedStringKey.foregroundColor : UIColor.white,
             NSAttributedStringKey.font : UIFont(name: "Noteworthy-Bold", size: 20)!], for: UIControlState.normal)
@@ -94,4 +92,3 @@ extension DataController {
         return (UIApplication.shared.delegate as! AppDelegate)._dataController
     }
 }
-

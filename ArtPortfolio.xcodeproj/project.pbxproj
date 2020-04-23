@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		1B65F1E32007013200F63446 /* PortfolioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B65F1E22007013200F63446 /* PortfolioCollectionViewCell.swift */; };
 		1B80C65020FCF59A00C93888 /* SAKAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B80C64F20FCF59A00C93888 /* SAKAnalytics.swift */; };
 		1B80C65220FF8A6100C93888 /* SAKSocialLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B80C65120FF8A6100C93888 /* SAKSocialLinks.swift */; };
+		1B87AF4C2452002D001F0216 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 1B87AF4B2452002D001F0216 /* SwiftPackageProductDependency */; };
 		1B939E0820ACA5B800EC5715 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD9C76620041B8C00022C8B /* DataController.swift */; };
 		1B939E0920ACA5BC00EC5715 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B20D117205353C90042960F /* Artist.swift */; };
 		1B939E0A20ACA5C000EC5715 /* PortfolioEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B65F1E02006FFBD00F63446 /* PortfolioEntry.swift */; };
@@ -84,6 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				509DE1D217B14B6CBFA3C861 /* Pods_ArtPortfolio.framework in Frameworks */,
+				1B87AF4C2452002D001F0216 /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +257,9 @@
 			dependencies = (
 			);
 			name = ArtPortfolio;
+			packageProductDependencies = (
+				1B87AF4B2452002D001F0216 /* SwiftPackageProductDependency */,
+			);
 			productName = ArtPortfolio;
 			productReference = 1BF4B177200303AF00376A8D /* V Portfolio.app */;
 			productType = "com.apple.product-type.application";
@@ -307,6 +312,9 @@
 				Base,
 			);
 			mainGroup = 1BF4B16E200303AF00376A8D;
+			packageReferences = (
+				1B87AF4A2452002D001F0216 /* RemoteSwiftPackageReference */,
+			);
 			productRefGroup = 1BF4B178200303AF00376A8D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -376,21 +384,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ArtPortfolio/Pods-ArtPortfolio-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/HexColors/HexColors.framework",
-				"${BUILT_PRODUCTS_DIR}/ScalingCarousel/ScalingCarousel.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ArtPortfolio/Pods-ArtPortfolio-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HexColors.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ScalingCarousel.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ArtPortfolio/Pods-ArtPortfolio-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArtPortfolio/Pods-ArtPortfolio-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ArtPortfolio/Pods-ArtPortfolio-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -570,7 +573,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -585,7 +589,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = QZK74L4Q7L;
 				INFOPLIST_FILE = ArtPortfolio/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.skern.artportfolio;
 				PRODUCT_NAME = "V Portfolio";
 				PROVISIONING_PROFILE = "83711854-0a7d-4bbc-887f-b6af16bac62e";
@@ -604,7 +611,10 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = QZK74L4Q7L;
 				INFOPLIST_FILE = ArtPortfolio/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.skern.artportfolio;
 				PRODUCT_NAME = "V Portfolio";
 				PROVISIONING_PROFILE = "d59e1241-7a1a-44af-af81-8b98e4501b8a";
@@ -622,7 +632,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3HDZQ5XYMF;
 				INFOPLIST_FILE = ArtPortfolioTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = skern.ArtPortfolioTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -639,7 +653,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3HDZQ5XYMF;
 				INFOPLIST_FILE = ArtPortfolioTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = skern.ArtPortfolioTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -679,6 +697,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1B87AF4A2452002D001F0216 /* RemoteSwiftPackageReference */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1B87AF4B2452002D001F0216 /* SwiftPackageProductDependency */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B87AF4A2452002D001F0216 /* RemoteSwiftPackageReference */;
+			productName = SwiftyBeaver;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1BF4B16F200303AF00376A8D /* Project object */;
 }
