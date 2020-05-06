@@ -3,7 +3,7 @@ An app to display the artistic talents of V.
 
 ## General
 -  App is written in Swift
--  Built using Xcode 9.4
+-  Built using Xcode 9.4, updated to 11.3
 
 ## Installation
 -  Clone or download the project code.
